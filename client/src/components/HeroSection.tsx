@@ -36,7 +36,7 @@ export default function HeroSection() {
 
           {/* Main Title */}
           <h1 className="text-white mb-6 tracking-tight">
-            Expertise et Innovation au service du Dispositif Médical
+            Expertise et Innovation au service du Médical
           </h1>
 
           {/* Subtitle */}
