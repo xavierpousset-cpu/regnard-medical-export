@@ -55,10 +55,10 @@ export default function Footer() {
               © {new Date().getFullYear()} Regnard Medical. Tous droits réservés.
             </p>
             <div className="flex gap-6 text-sm text-background/60">
-              <a href="#" className="hover:text-background transition-colors duration-150">
+              <a href="/mentions-legales" className="hover:text-background transition-colors duration-150">
                 Mentions légales
               </a>
-              <a href="#" className="hover:text-background transition-colors duration-150">
+              <a href="/politique-confidentialite" className="hover:text-background transition-colors duration-150">
                 Politique de confidentialité
               </a>
             </div>
