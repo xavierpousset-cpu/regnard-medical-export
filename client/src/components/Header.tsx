@@ -46,16 +46,23 @@ export default function Header() {
       <div className="container">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
             <a
               href="#"
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className="font-display font-bold text-xl text-foreground tracking-tight"
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-150"
             >
-              REGNARD MEDICAL
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/MybTxWdLMDunEOYU.svg"
+                alt="Regnard Medical Logo"
+                className="h-10 w-10"
+              />
+              <span className="font-display font-bold text-lg text-foreground tracking-tight">
+                REGNARD MEDICAL
+              </span>
             </a>
           </div>
 
