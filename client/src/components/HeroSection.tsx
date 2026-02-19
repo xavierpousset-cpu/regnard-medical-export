@@ -20,12 +20,12 @@ export default function HeroSection() {
       {/* Background Image avec overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://private-us-east-1.manuscdn.com/sessionFile/V8tu5qMPe1byRexDgMU2NQ/sandbox/BndEUYCABGUfi8qq8lXOOF-img-1_1771423114000_na1fn_aGVyby1tZWRpY2FsLWxhYg.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvVjh0dTVxTVBlMWJ5UmV4RGdNVTJOUS9zYW5kYm94L0JuZEVVWUNBQkdVZmk4cXE4bFhPT0YtaW1nLTFfMTc3MTQyMzExNDAwMF9uYTFmbl9hR1Z5YnkxdFpXUnBZMkZzTFd4aFlnLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=KO5j0BZmGok379a2SCYfybZrGRuOXjCbnLqDi54p~URFsjqKDzuY5zALt1P7ympgjy1dNY-kDQkjxgzxorJTh3fj~2ft5TY2rXo-eov5eTSXJWe1MnccH1~IEuWF5vXJqMlwTisIkOtfn90Z1am4mXIOEyHKtFRunx26DHabKUqcZ44lDeTvONqTxFAMIGMZUdKdOVQd~051sorphKW4Cm6OcGLH1l4HT2ia6wf5-Szg8PG3ROz0amxLuFo8Vbz3wEhtnY~1C~jmfmGzkTJnLQeiZHwNRCEr7RzcelHBDNA4GV-~DQPEipZCgj~wxXoZV63pWt3yBtw-ZCwWF5rBJw__"
-          alt="Laboratoire médical moderne"
+          src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/fegrwvTyCSkprUFO.jpg"
+          alt="Bureau d'études Regnard Medical"
           className="w-full h-full object-cover"
         />
-        {/* Overlay gradient pour lisibilité du texte - couleur sombre sur image claire */}
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/50"></div>
+        {/* Overlay noir pour lisibilité du texte */}
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Content */}
