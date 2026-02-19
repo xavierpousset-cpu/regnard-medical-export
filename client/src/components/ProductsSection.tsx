@@ -7,11 +7,13 @@
 
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
+import { useLocation } from "wouter";
 
 const products = [
   {
-    name: "O-PREP®DIVAN",
+    name: "O-PREP® DIVAN",
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/PkszOBngDOpNWnXd.png",
+    link: "/oprep-divan",
     benefits: [
       "Ergonomie optimisée pour le praticien",
       "Fiabilité éprouvée en environnement hospitalier",
@@ -20,8 +22,9 @@ const products = [
     ],
   },
   {
-    name: "O-PREP®ALTESSE",
+    name: "O-PREP® ALTESSE",
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/mMtGbBrysgNynIbs.png",
+    link: "/oprep-altesse",
     benefits: [
       "Design innovant et fonctionnel",
       "Précision technique de pointe",
@@ -32,10 +35,7 @@ const products = [
 ];
 
 export default function ProductsSection() {
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    contactSection?.scrollIntoView({ behavior: "smooth" });
-  };
+  const [, navigate] = useLocation();
 
   return (
     <section className="py-32 bg-secondary">
@@ -88,7 +88,7 @@ export default function ProductsSection() {
 
                 <Button
                   variant="outline"
-                  onClick={scrollToContact}
+                  onClick={() => navigate(product.link)}
                   className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors duration-150"
                 >
                   Découvrir nos solutions
