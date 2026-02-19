@@ -83,7 +83,7 @@ export default function Header() {
                 <a
                   href={item.href}
                   onClick={(e) => {
-                    if (!item.isExternal && !item.submenu) {
+                    if (!item.isExternal && !item.submenu && item.href.startsWith('#')) {
                       e.preventDefault();
                       scrollToSection(item.href);
                     }
@@ -184,8 +184,11 @@ export default function Header() {
                     onClick={() => {
                       if (item.submenu) {
                         setOpenSubmenu(openSubmenu === item.label ? null : item.label);
-                      } else {
+                      } else if (item.href.startsWith('#')) {
                         scrollToSection(item.href);
+                      } else {
+                        setLocation(item.href);
+                        setMobileMenuOpen(false);
                       }
                     }}
                     className="w-full text-left text-base font-medium text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center justify-between"
