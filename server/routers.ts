@@ -3,7 +3,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router, protectedProcedure } from "./_core/trpc";
 import { z } from "zod";
-import { createQuoteRequest, getQuoteRequests, getAllUsers, updateUserRole, deleteUser } from "./db";
+import { createQuoteRequest, getQuoteRequests, getAllUsers, updateUserRole, deleteUser, createForumTopic, getForumTopics, getForumTopicById, createForumPost, getForumPostsByTopic, deleteForumPost, deleteForumTopic } from "./db";
 import { notifyOwner } from "./_core/notification";
 import { TRPCError } from "@trpc/server";
 
@@ -65,12 +65,12 @@ export const appRouter = router({
       .input(
         z.object({
           userId: z.number(),
-          role: z.enum(['user', 'admin', 'superadmin']),
+          role: z.enum(['user', 'admin', 'superadmin', 'moderator']),
         })
       )
       .mutation(async ({ ctx, input }) => {
-        if (ctx.user.role !== 'superadmin') {
-          throw new TRPCError({ code: 'FORBIDDEN', message: 'Superadmin access required' });
+        if (ctx.user.role !== 'superadmin' && ctx.user.role !== 'admin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Admin access required' });
         }
         await updateUserRole(input.userId, input.role);
         return { success: true };
@@ -82,6 +82,76 @@ export const appRouter = router({
           throw new TRPCError({ code: 'FORBIDDEN', message: 'Superadmin access required' });
         }
         await deleteUser(input.userId);
+        return { success: true };
+      }),
+  }),
+
+  forum: router({
+    getTopics: publicProcedure.query(async () => {
+      return await getForumTopics();
+    }),
+    getTopic: publicProcedure
+      .input(z.object({ topicId: z.number() }))
+      .query(async ({ input }) => {
+        return await getForumTopicById(input.topicId);
+      }),
+    getPosts: publicProcedure
+      .input(z.object({ topicId: z.number() }))
+      .query(async ({ input }) => {
+        return await getForumPostsByTopic(input.topicId);
+      }),
+    createTopic: protectedProcedure
+      .input(
+        z.object({
+          title: z.string().min(1),
+          description: z.string().optional(),
+        })
+      )
+      .mutation(async ({ ctx, input }) => {
+        if (!ctx.user) {
+          throw new TRPCError({ code: 'UNAUTHORIZED', message: 'User not authenticated' });
+        }
+        const result = await createForumTopic({
+          title: input.title,
+          description: input.description,
+          createdBy: ctx.user.id,
+        });
+        return { success: true, id: (result as any).insertId || 0 };
+      }),
+    createPost: protectedProcedure
+      .input(
+        z.object({
+          topicId: z.number(),
+          content: z.string().min(1),
+        })
+      )
+      .mutation(async ({ ctx, input }) => {
+        if (!ctx.user) {
+          throw new TRPCError({ code: 'UNAUTHORIZED', message: 'User not authenticated' });
+        }
+        const result = await createForumPost({
+          topicId: input.topicId,
+          userId: ctx.user.id,
+          content: input.content,
+        });
+        return { success: true, id: (result as any).insertId || 0 };
+      }),
+    deletePost: protectedProcedure
+      .input(z.object({ postId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== 'moderator' && ctx.user.role !== 'admin' && ctx.user.role !== 'superadmin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Moderator access required' });
+        }
+        await deleteForumPost(input.postId);
+        return { success: true };
+      }),
+    deleteTopic: protectedProcedure
+      .input(z.object({ topicId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== 'admin' && ctx.user.role !== 'superadmin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Admin access required' });
+        }
+        await deleteForumTopic(input.topicId);
         return { success: true };
       }),
   }),

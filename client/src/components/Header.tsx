@@ -24,6 +24,7 @@ const navItems = [
       { label: "O-PREP®ALTESSE", href: "/oprep-altesse" },
     ],
   },
+  { label: "Forum", href: "/forum", isExternal: false },
   { label: "Valeurs", href: "#valeurs", isExternal: false },
   { label: "À propos", href: "#about", isExternal: false },
 ];

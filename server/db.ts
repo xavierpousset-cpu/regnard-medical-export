@@ -1,6 +1,6 @@
-import { eq } from "drizzle-orm";
+import { eq, desc } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, quoteRequests, InsertQuoteRequest } from "../drizzle/schema";
+import { InsertUser, users, quoteRequests, InsertQuoteRequest, forumTopics, forumPosts, InsertForumTopic, InsertForumPost } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -120,7 +120,7 @@ export async function getAllUsers() {
   return await db.select().from(users);
 }
 
-export async function updateUserRole(userId: number, role: 'user' | 'admin' | 'superadmin') {
+export async function updateUserRole(userId: number, role: 'user' | 'admin' | 'superadmin' | 'moderator') {
   const db = await getDb();
   if (!db) {
     throw new Error("Database not available");
@@ -136,4 +136,74 @@ export async function deleteUser(userId: number) {
   }
 
   await db.delete(users).where(eq(users.id, userId));
+}
+
+// Forum functions
+export async function createForumTopic(data: InsertForumTopic) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(forumTopics).values(data);
+  return result;
+}
+
+export async function getForumTopics() {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  return await db.select().from(forumTopics).orderBy(desc(forumTopics.createdAt));
+}
+
+export async function getForumTopicById(topicId: number) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.select().from(forumTopics).where(eq(forumTopics.id, topicId)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function createForumPost(data: InsertForumPost) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(forumPosts).values(data);
+  return result;
+}
+
+export async function getForumPostsByTopic(topicId: number) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  return await db.select().from(forumPosts).where(eq(forumPosts.topicId, topicId)).orderBy(forumPosts.createdAt);
+}
+
+export async function deleteForumPost(postId: number) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  await db.delete(forumPosts).where(eq(forumPosts.id, postId));
+}
+
+export async function deleteForumTopic(topicId: number) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  // Delete all posts in the topic first
+  await db.delete(forumPosts).where(eq(forumPosts.topicId, topicId));
+  // Then delete the topic
+  await db.delete(forumTopics).where(eq(forumTopics.id, topicId));
 }
