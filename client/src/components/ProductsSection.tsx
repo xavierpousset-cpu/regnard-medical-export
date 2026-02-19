@@ -59,7 +59,7 @@ export default function ProductsSection() {
             >
               {/* Image */}
               <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                <div className="relative aspect-[4/3] overflow-hidden bg-background">
+                <div className="relative aspect-[4/3] overflow-hidden bg-transparent">
                   <img
                     src={product.image}
                     alt={product.name}
