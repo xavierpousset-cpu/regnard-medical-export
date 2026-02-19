@@ -1,10 +1,11 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { publicProcedure, router } from "./_core/trpc";
+import { publicProcedure, router, protectedProcedure } from "./_core/trpc";
 import { z } from "zod";
 import { createQuoteRequest, getQuoteRequests } from "./db";
 import { notifyOwner } from "./_core/notification";
+import { TRPCError } from "@trpc/server";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -45,7 +46,10 @@ export const appRouter = router({
         
         return { success: true, id: (result as any).insertId || 0 };
       }),
-    list: publicProcedure.query(async () => {
+    list: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== 'admin') {
+        throw new TRPCError({ code: 'FORBIDDEN', message: 'Admin access required' });
+      }
       return await getQuoteRequests();
     }),
   }),

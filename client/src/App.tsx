@@ -10,6 +10,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Questionnaire from "./pages/Questionnaire";
 import OPrepDivan from "./pages/OPrepDivan";
 import OPrepAltesse from "./pages/OPrepAltesse";
+import AdminDashboard from "./pages/AdminDashboard";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -18,6 +19,7 @@ function Router() {
       <Route path={"/questionnaire"} component={Questionnaire} />
       <Route path={"/oprep-divan"} component={OPrepDivan} />
       <Route path={"/oprep-altesse"} component={OPrepAltesse} />
+      <Route path={"/admin"} component={AdminDashboard} />
       <Route path={"/mentions-legales"} component={LegalNotice} />
       <Route path={"/politique-confidentialite"} component={PrivacyPolicy} />
       <Route path={"/404"} component={NotFound} />
