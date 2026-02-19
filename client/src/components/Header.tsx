@@ -49,11 +49,17 @@ export default function Header() {
     }
   };
 
-  const scrollToContact = () => {
+  const handleContactClick = () => {
     setMobileMenuOpen(false);
     setOpenSubmenu(null);
-    const contactSection = document.getElementById("contact");
-    contactSection?.scrollIntoView({ behavior: "smooth" });
+    // Si on est sur la homepage, scroll vers la section contact
+    if (window.location.pathname === '/') {
+      const contactSection = document.getElementById("contact");
+      contactSection?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Sinon, rediriger vers la page de contact
+      setLocation('/contact');
+    }
   };
 
   return (
@@ -113,7 +119,7 @@ export default function Header() {
             ))}
             <Button
               size="sm"
-              onClick={scrollToContact}
+              onClick={handleContactClick}
               className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-150"
             >
               Contact
@@ -222,7 +228,7 @@ export default function Header() {
                 </div>
               ))}
               <Button
-                onClick={scrollToContact}
+                onClick={handleContactClick}
                 className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-150 w-full"
               >
                 Contact
