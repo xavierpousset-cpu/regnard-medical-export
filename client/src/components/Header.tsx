@@ -3,24 +3,35 @@
  * Design: Industrial Minimalism
  * - Navigation sobre et fonctionnelle
  * - Logo texte
+ * - Menu déroulant pour les produits
  */
 
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 const navItems = [
   { label: "Expertise", href: "#expertise", isExternal: false },
-  { label: "Solutions", href: "/oprep-divan", isExternal: true },
+  {
+    label: "Nos produits",
+    href: "#",
+    isExternal: false,
+    submenu: [
+      { label: "O-PREP®DIVAN", href: "/oprep-divan" },
+      { label: "O-PREP®ALTESSE", href: "/oprep-altesse" },
+    ],
+  },
   { label: "Valeurs", href: "#valeurs", isExternal: false },
   { label: "À propos", href: "#about", isExternal: false },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
   const scrollToSection = (href: string) => {
     setMobileMenuOpen(false);
+    setOpenSubmenu(null);
     if (href === "#expertise") {
       document.querySelector("section")?.nextElementSibling?.scrollIntoView({ behavior: "smooth" });
     } else if (href === "#valeurs") {
@@ -34,6 +45,7 @@ export default function Header() {
 
   const scrollToContact = () => {
     setMobileMenuOpen(false);
+    setOpenSubmenu(null);
     const contactSection = document.getElementById("contact");
     contactSection?.scrollIntoView({ behavior: "smooth" });
   };
@@ -62,19 +74,36 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={(e) => {
-                  if (!item.isExternal) {
-                    e.preventDefault();
-                    scrollToSection(item.href);
-                  }
-                }}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150"
-              >
-                {item.label}
-              </a>
+              <div key={item.label} className="relative group">
+                <a
+                  href={item.href}
+                  onClick={(e) => {
+                    if (!item.isExternal && !item.submenu) {
+                      e.preventDefault();
+                      scrollToSection(item.href);
+                    }
+                  }}
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center gap-1"
+                >
+                  {item.label}
+                  {item.submenu && <ChevronDown className="h-4 w-4" />}
+                </a>
+
+                {/* Dropdown Menu */}
+                {item.submenu && (
+                  <div className="absolute left-0 mt-0 w-48 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    {item.submenu.map((subitem) => (
+                      <a
+                        key={subitem.label}
+                        href={subitem.href}
+                        className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg"
+                      >
+                        {subitem.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <Button
               size="sm"
@@ -104,19 +133,43 @@ export default function Header() {
           <nav className="md:hidden py-6 border-t border-border">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={(e) => {
-                    if (!item.isExternal) {
-                      e.preventDefault();
-                      scrollToSection(item.href);
-                    }
-                  }}
-                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors duration-150"
-                >
-                  {item.label}
-                </a>
+                <div key={item.label}>
+                  <button
+                    onClick={() => {
+                      if (item.submenu) {
+                        setOpenSubmenu(openSubmenu === item.label ? null : item.label);
+                      } else {
+                        scrollToSection(item.href);
+                      }
+                    }}
+                    className="w-full text-left text-base font-medium text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center justify-between"
+                  >
+                    {item.label}
+                    {item.submenu && (
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-200 ${
+                          openSubmenu === item.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    )}
+                  </button>
+
+                  {/* Mobile Submenu */}
+                  {item.submenu && openSubmenu === item.label && (
+                    <div className="mt-2 ml-4 space-y-2 border-l border-border pl-4">
+                      {item.submenu.map((subitem) => (
+                        <a
+                          key={subitem.label}
+                          href={subitem.href}
+                          className="block text-sm text-muted-foreground hover:text-foreground transition-colors duration-150"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {subitem.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <Button
                 onClick={scrollToContact}
