@@ -7,12 +7,12 @@
  */
 
 import ContactSection from "@/components/ContactSection";
+import EhpadStudySection from "@/components/EhpadStudySection";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ProductsSection from "@/components/ProductsSection";
-import TallyForm from "@/components/TallyForm";
 import ValuesSection from "@/components/ValuesSection";
 import WhyUsSection from "@/components/WhyUsSection";
 
@@ -24,7 +24,7 @@ export default function Home() {
         <HeroSection />
         <ExpertiseSection />
         <ProductsSection />
-        <TallyForm />
+        <EhpadStudySection />
         <ValuesSection />
         <WhyUsSection />
         <ContactSection />
