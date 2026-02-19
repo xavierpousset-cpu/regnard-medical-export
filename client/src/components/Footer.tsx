@@ -14,8 +14,11 @@ export default function Footer() {
             <h3 className="font-display font-bold text-xl mb-4 tracking-tight">
               REGNARD MEDICAL
             </h3>
-            <p className="text-sm text-background/70 leading-relaxed">
+            <p className="text-sm text-background/70 leading-relaxed mb-4">
               Expertise et innovation au service du dispositif médical. Réparation, recherche et développement pour les établissements de santé.
+            </p>
+            <p className="text-xs text-background/60">
+              Division de <a href="https://www.regnardtechnologie.com/" target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors duration-150 underline">Regnard Technologie</a>
             </p>
           </div>
 
