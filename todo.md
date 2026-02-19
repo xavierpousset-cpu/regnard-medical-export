@@ -16,5 +16,5 @@
 - [ ] Système de statuts pour les demandes (En attente, Contactée, Convertie, Perdue)
 - [ ] Emails automatiques aux prospects et administrateurs
 - [ ] Section Témoignages clients
-- [ ] FAQ page
+- [x] Page FAQ avec questions sur maintenance et tarifs
 - [ ] Blog/Resources section
