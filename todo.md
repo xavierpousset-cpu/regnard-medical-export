@@ -12,7 +12,7 @@
 - [ ] Interface de gestion des admins dans le dashboard
 - [x] Forum pour le personnel médical avec système de permissions
 - [x] Gestion des modérateurs dans le dashboard admin (via API)
-- [x] Page "Nos Services" avec sections détaillées
+- [x] Page "Nos Services" avec sections détaillées et images de lits médicalisés
 - [ ] Système de statuts pour les demandes (En attente, Contactée, Convertie, Perdue)
 - [ ] Emails automatiques aux prospects et administrateurs
 - [ ] Section Témoignages clients
