@@ -112,7 +112,7 @@ export default function Services() {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-white mb-4">
+            <h1 className="font-bold text-white mb-4">
               Nos services
             </h1>
             <p className="text-2xl text-white/90 mb-2">
@@ -141,7 +141,7 @@ export default function Services() {
       <section className="py-16 bg-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <h2 className="font-bold text-slate-900 mb-6">
               Partenaire technique des établissements de santé
             </h2>
             <div className="prose prose-lg max-w-none text-slate-600">
@@ -154,7 +154,7 @@ export default function Services() {
             </div>
 
             <div className="mt-10">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">
+              <h3 className="font-semibold text-slate-900 mb-4">
                 Nous accompagnons :
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -176,7 +176,7 @@ export default function Services() {
       {/* Services Détaillés */}
       <section className="py-20 bg-slate-50">
         <div className="container">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+            <h2 className="font-bold text-slate-900 mb-4 text-center">
             Nos domaines d'intervention
           </h2>
           <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
@@ -240,7 +240,7 @@ export default function Services() {
       <section className="py-16 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <h2 className="font-bold text-slate-900 mb-6">
               Notre ADN industriel
             </h2>
             <p className="text-slate-600 mb-8">
@@ -299,7 +299,7 @@ export default function Services() {
       {/* Bénéfices */}
       <section className="py-16 bg-slate-50">
         <div className="container">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            <h2 className="font-bold text-slate-900 mb-12 text-center">
             Bénéfices pour vos établissements
           </h2>
 
@@ -321,7 +321,7 @@ export default function Services() {
       <section className="py-16 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <h2 className="font-bold text-slate-900 mb-6">
               Votre partenaire de confiance
             </h2>
             <p className="text-lg text-slate-600 mb-8">
@@ -352,7 +352,7 @@ export default function Services() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="font-bold mb-4">
               Besoin d'une intervention ou d'un audit de votre parc ?
             </h2>
             <p className="text-blue-100 mb-8 text-lg">

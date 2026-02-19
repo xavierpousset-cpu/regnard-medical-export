@@ -70,7 +70,7 @@ export default function OPrepAltesse() {
       <section className="relative pt-32 pb-24 bg-gradient-to-br from-background to-secondary mt-20">
         <div className="container">
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight whitespace-nowrap">
+            <h1 className="font-bold text-foreground mb-6 leading-tight whitespace-nowrap">
               O-PREP® ALTESSE
             </h1>
             <p className="text-2xl text-primary font-semibold mb-6">
@@ -110,7 +110,7 @@ export default function OPrepAltesse() {
               />
             </div>
             <div className="flex-1">
-              <h2 className="text-4xl font-bold text-foreground mb-8">Hydro-lavage colique compact et continu</h2>
+              <h2 className="font-bold text-foreground mb-8">Hydro-lavage colique compact et continu</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 O-PREP®ALTESSE est une solution compacte avec un réservoir de 2 litres alimenté en continu par de l'eau chaude. Un mitigeur assure la température optimale pour une irrigation douce et contrôlée du côlon.
               </p>
@@ -136,13 +136,13 @@ export default function OPrepAltesse() {
       <section className="py-24 bg-secondary">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-4xl font-bold text-foreground mb-8">Une solution légère et intégrée</h2>
+            <h2 className="font-bold text-foreground mb-8">Une solution légère et intégrée</h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
                 O-PREP®ALTESSE est une solution allégée et discrète conçue pour faciliter la préparation à la coloscopie. En remplaçant simplement la cuvette de WC traditionnelle, elle offre une approche moins invasive et plus accessible, particulièrement adaptée aux environnements où l'installation d'équipements complets n'est pas possible.
               </p>
               <div className="bg-secondary p-8 rounded-lg border border-border">
-                <h3 className="text-xl font-semibold text-foreground mb-6">Caractéristiques principales :</h3>
+                <h3 className="font-semibold text-foreground mb-6">Caractéristiques principales :</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
@@ -173,7 +173,7 @@ export default function OPrepAltesse() {
       {/* Specific Benefits */}
       <section className="py-24 bg-secondary">
         <div className="container">
-          <h2 className="text-4xl font-bold text-foreground mb-16">Bénéfices spécifiques</h2>
+          <h2 className="font-bold text-foreground mb-16">Bénéfices spécifiques</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -211,7 +211,7 @@ export default function OPrepAltesse() {
               return (
                 <div key={index} className="bg-background p-8 rounded-lg border border-border hover:border-primary transition-colors duration-150">
                   <Icon className="h-8 w-8 text-primary mb-4" strokeWidth={1.5} />
-                  <h3 className="text-xl font-semibold text-foreground mb-3">{benefit.title}</h3>
+                  <h3 className="font-semibold text-foreground mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </div>
               );
@@ -223,7 +223,7 @@ export default function OPrepAltesse() {
       {/* Organizational Impact */}
       <section className="py-24 bg-background">
         <div className="container">
-          <h2 className="text-4xl font-bold text-foreground mb-8">Impact organisationnel pour les décideurs</h2>
+          <h2 className="font-bold text-foreground mb-8">Impact organisationnel pour les décideurs</h2>
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-3xl">
             O-PREP®ALTESSE contribue à l'amélioration opérationnelle et financière de votre structure :
           </p>
@@ -272,7 +272,7 @@ export default function OPrepAltesse() {
       {/* Survey Section */}
       <section className="py-24 bg-background">
         <div className="container max-w-3xl">
-          <h2 className="text-4xl font-bold text-foreground mb-6">Participez à l'amélioration des pratiques</h2>
+          <h2 className="font-bold text-foreground mb-6">Participez à l'amélioration des pratiques</h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Nous menons une enquête auprès des établissements de santé et EHPAD afin d'adapter nos solutions aux réalités du terrain.
           </p>
@@ -288,7 +288,7 @@ export default function OPrepAltesse() {
       {/* Quote Form */}
       <section id="devis-form" className="py-24 bg-secondary">
         <div className="container max-w-2xl">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Demander un devis personnalisé</h2>
+          <h2 className="font-bold text-foreground mb-12">Demander un devis personnalisé</h2>
           <form onSubmit={handleFormSubmit} className="space-y-6 bg-background p-8 rounded-lg border border-border">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>

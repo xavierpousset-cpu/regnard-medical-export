@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 interface FAQItem {
   category: string;
@@ -131,7 +133,8 @@ export default function FAQ() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      <Header />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-background to-secondary">
         <div className="container">
@@ -150,7 +153,7 @@ export default function FAQ() {
           <div className="space-y-12">
             {faqData.map((category) => (
               <div key={category.category}>
-                <h2 className="mb-8 text-2xl font-bold text-foreground">
+                <h2 className="mb-8 font-bold text-foreground">
                   {category.category}
                 </h2>
                 
@@ -190,7 +193,7 @@ export default function FAQ() {
 
           {/* CTA Section */}
           <div className="mt-20 p-8 bg-secondary rounded-lg border border-border">
-            <h3 className="mb-4 text-xl font-bold text-foreground">
+            <h3 className="mb-4 font-bold text-foreground">
               Vous n'avez pas trouvé votre réponse ?
             </h3>
             <p className="mb-6 text-muted-foreground">
@@ -213,6 +216,7 @@ export default function FAQ() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

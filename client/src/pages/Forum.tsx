@@ -99,7 +99,7 @@ export default function Forum() {
       <main className="flex-1 pt-24">
         <div className="container py-12">
           <div className="mb-12">
-            <h1 className="text-4xl font-bold text-foreground mb-2">Forum Médical</h1>
+            <h1 className="font-bold text-foreground mb-2">Forum Médical</h1>
             <p className="text-muted-foreground">
               Espace d'échange pour le personnel médical. Partagez vos expériences, posez vos questions et discutez de sujets techniques.
             </p>

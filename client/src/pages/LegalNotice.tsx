@@ -14,7 +14,7 @@ export default function LegalNotice() {
       <div className="container max-w-4xl">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-4xl font-display font-bold text-foreground mb-4">
+          <h1 className="font-display font-bold text-foreground mb-4">
             Mentions Légales
           </h1>
           <p className="text-muted-foreground">
@@ -26,7 +26,7 @@ export default function LegalNotice() {
         <div className="prose prose-sm max-w-none text-foreground space-y-8">
           {/* Section 1 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               1. Présentation du site
             </h2>
             <p className="text-muted-foreground mb-4">
@@ -56,7 +56,7 @@ export default function LegalNotice() {
 
           {/* Section 2 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               2. Conditions générales d'utilisation du site et des services
               proposés
             </h2>
@@ -85,7 +85,7 @@ export default function LegalNotice() {
 
           {/* Section 3 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               3. Description des services fournis
             </h2>
             <p className="text-muted-foreground mb-4">
@@ -110,7 +110,7 @@ export default function LegalNotice() {
 
           {/* Section 4 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               4. Limitations contractuelles sur les données techniques
             </h2>
             <p className="text-muted-foreground mb-4">
@@ -127,7 +127,7 @@ export default function LegalNotice() {
 
           {/* Section 5 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               5. Propriété intellectuelle et contrefaçons
             </h2>
             <p className="text-muted-foreground mb-4">
@@ -152,7 +152,7 @@ export default function LegalNotice() {
 
           {/* Section 6 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               6. Limitations de responsabilité
             </h2>
             <p className="text-muted-foreground mb-4">
@@ -184,7 +184,7 @@ export default function LegalNotice() {
 
           {/* Section 7 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               7. Gestion des données personnelles
             </h2>
             <p className="text-muted-foreground mb-4">
@@ -240,7 +240,7 @@ export default function LegalNotice() {
 
           {/* Section 8 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               8. Liens hypertextes et cookies
             </h2>
             <p className="text-muted-foreground mb-4">
@@ -270,7 +270,7 @@ export default function LegalNotice() {
 
           {/* Section 9 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               9. Droit applicable et attribution de juridiction
             </h2>
             <p className="text-muted-foreground">
@@ -282,7 +282,7 @@ export default function LegalNotice() {
 
           {/* Section 10 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               10. Les principales lois concernées
             </h2>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
@@ -300,7 +300,7 @@ export default function LegalNotice() {
 
           {/* Section 11 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               11. Lexique
             </h2>
             <div className="space-y-3 text-sm text-muted-foreground">

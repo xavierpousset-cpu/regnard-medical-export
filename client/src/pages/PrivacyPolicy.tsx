@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
       <div className="container max-w-4xl">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-4xl font-display font-bold text-foreground mb-4">
+          <h1 className="font-display font-bold text-foreground mb-4">
             Politique de Confidentialité
           </h1>
           <p className="text-muted-foreground">
@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
         <div className="prose prose-sm max-w-none text-foreground space-y-8">
           {/* Section 1 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               1. Introduction
             </h2>
             <p className="text-muted-foreground">
@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
 
           {/* Section 2 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               2. Informations que nous collectons
             </h2>
             <p className="text-muted-foreground mb-4">
@@ -64,7 +64,7 @@ export default function PrivacyPolicy() {
 
           {/* Section 3 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               3. Utilisation de vos informations
             </h2>
             <p className="text-muted-foreground mb-4">
@@ -82,7 +82,7 @@ export default function PrivacyPolicy() {
 
           {/* Section 4 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               4. Partage de vos informations
             </h2>
             <p className="text-muted-foreground mb-4">
@@ -105,7 +105,7 @@ export default function PrivacyPolicy() {
 
           {/* Section 5 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               5. Sécurité de vos données
             </h2>
             <p className="text-muted-foreground">
@@ -119,7 +119,7 @@ export default function PrivacyPolicy() {
 
           {/* Section 6 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               6. Cookies et technologies similaires
             </h2>
             <p className="text-muted-foreground mb-4">
@@ -140,7 +140,7 @@ export default function PrivacyPolicy() {
 
           {/* Section 7 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               7. Vos droits
             </h2>
             <p className="text-muted-foreground mb-4">
@@ -163,7 +163,7 @@ export default function PrivacyPolicy() {
 
           {/* Section 8 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               8. Conservation des données
             </h2>
             <p className="text-muted-foreground">
@@ -177,7 +177,7 @@ export default function PrivacyPolicy() {
 
           {/* Section 9 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               9. Modifications de cette politique
             </h2>
             <p className="text-muted-foreground">
@@ -190,7 +190,7 @@ export default function PrivacyPolicy() {
 
           {/* Section 10 */}
           <section>
-            <h2 className="text-2xl font-display font-bold mb-4">
+            <h2 className="font-display font-bold mb-4">
               10. Nous contacter
             </h2>
             <p className="text-muted-foreground mb-4">

@@ -110,7 +110,7 @@ function AdminDashboardContent() {
       <div className="container mx-auto py-8">
         {/* En-tête */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Tableau de bord Admin</h1>
+          <h1 className="font-bold text-foreground mb-2">Tableau de bord Admin</h1>
           <p className="text-muted-foreground">Gérez et visualisez toutes les demandes de devis</p>
         </div>
 

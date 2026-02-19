@@ -70,7 +70,7 @@ export default function OPrepDivan() {
       <section className="relative pt-32 pb-24 bg-gradient-to-br from-background to-secondary mt-20">
         <div className="container">
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight whitespace-nowrap">
+            <h1 className="font-bold text-foreground mb-6 leading-tight whitespace-nowrap">
               O-PREP® DIVAN
             </h1>
             <p className="text-2xl text-primary font-semibold mb-6">
@@ -110,7 +110,7 @@ export default function OPrepDivan() {
               />
             </div>
             <div className="flex-1">
-              <h2 className="text-4xl font-bold text-foreground mb-8">Caractéristiques techniques</h2>
+              <h2 className="font-bold text-foreground mb-8">Caractéristiques techniques</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 O-PREP®DIVAN utilise un réservoir de 30,5 litres d'eau portée à 37°C, positionné à 90 cm au-dessus du bassin du patient. Par principe de gravité et à basse pression (0,7 PA), l'eau irrigue le côlon jusqu'au cæcum avec un débit moyen de 1,3 litres/minute.
               </p>
@@ -136,13 +136,13 @@ export default function OPrepDivan() {
       <section className="py-24 bg-secondary">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-4xl font-bold text-foreground mb-8">Une solution ergonomique pensée pour le terrain</h2>
+            <h2 className="font-bold text-foreground mb-8">Une solution ergonomique pensée pour le terrain</h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
                 O-PREP®DIVAN est un dispositif ergonomique conçu pour faciliter la préparation à la coloscopie, notamment chez les patients âgés ou à mobilité réduite. Pensé pour les environnements EHPAD et hospitaliers, il améliore significativement la qualité des soins et la sécurité des patients.
               </p>
               <div className="bg-secondary p-8 rounded-lg border border-border">
-                <h3 className="text-xl font-semibold text-foreground mb-6">Améliore :</h3>
+                <h3 className="font-semibold text-foreground mb-6">Améliore :</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
@@ -173,7 +173,7 @@ export default function OPrepDivan() {
       {/* Specific Benefits */}
       <section className="py-24 bg-secondary">
         <div className="container">
-          <h2 className="text-4xl font-bold text-foreground mb-16">Bénéfices spécifiques pour EHPAD et gériatrie</h2>
+          <h2 className="font-bold text-foreground mb-16">Bénéfices spécifiques pour EHPAD et gériatrie</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -211,7 +211,7 @@ export default function OPrepDivan() {
               return (
                 <div key={index} className="bg-background p-8 rounded-lg border border-border hover:border-primary transition-colors duration-150">
                   <Icon className="h-8 w-8 text-primary mb-4" strokeWidth={1.5} />
-                  <h3 className="text-xl font-semibold text-foreground mb-3">{benefit.title}</h3>
+                  <h3 className="font-semibold text-foreground mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </div>
               );
@@ -223,7 +223,7 @@ export default function OPrepDivan() {
       {/* Organizational Impact */}
       <section className="py-24 bg-background">
         <div className="container">
-          <h2 className="text-4xl font-bold text-foreground mb-8">Impact organisationnel pour les décideurs</h2>
+          <h2 className="font-bold text-foreground mb-8">Impact organisationnel pour les décideurs</h2>
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-3xl">
             O-PREP®DIVAN contribue directement à l'amélioration de votre structure :
           </p>
@@ -246,7 +246,7 @@ export default function OPrepDivan() {
       {/* Trust & Validation */}
       <section className="py-24 bg-secondary">
         <div className="container">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Confiance & Validation</h2>
+          <h2 className="font-bold text-foreground mb-12">Confiance & Validation</h2>
           <div className="max-w-3xl bg-background p-12 rounded-lg border-2 border-primary">
             <p className="text-muted-foreground mb-8 leading-relaxed">
               Une innovation développée sur le terrain, validée par l'usage.
@@ -272,7 +272,7 @@ export default function OPrepDivan() {
       {/* Survey Section */}
       <section className="py-24 bg-background">
         <div className="container max-w-3xl">
-          <h2 className="text-4xl font-bold text-foreground mb-6">Participez à l'amélioration des pratiques</h2>
+          <h2 className="font-bold text-foreground mb-6">Participez à l'amélioration des pratiques</h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Nous menons une enquête auprès des établissements de santé et EHPAD afin d'adapter nos solutions aux réalités du terrain.
           </p>
@@ -288,7 +288,7 @@ export default function OPrepDivan() {
       {/* Quote Form */}
       <section id="devis-form" className="py-24 bg-secondary">
         <div className="container max-w-2xl">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Demander un devis personnalisé</h2>
+          <h2 className="font-bold text-foreground mb-12">Demander un devis personnalisé</h2>
           <form onSubmit={handleFormSubmit} className="space-y-6 bg-background p-8 rounded-lg border border-border">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
