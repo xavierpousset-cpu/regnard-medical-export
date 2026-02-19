@@ -110,16 +110,16 @@ export default function OPrepAltesse() {
               />
             </div>
             <div className="flex-1">
-              <h2 className="text-4xl font-bold text-foreground mb-8">Hydro-lavage colique par gravité</h2>
+              <h2 className="text-4xl font-bold text-foreground mb-8">Hydro-lavage colique compact et continu</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                O-PREP®ALTESSE utilise le même système d'irrigation par gravité que le DIVAN : 30,5 litres d'eau à 37°C, positionnés à 90 cm au-dessus du bassin. Basse pression (0,7 PA), débit de 1,3 litres/minute, irrigation jusqu'au cæcum.
+                O-PREP®ALTESSE est une solution compacte avec un réservoir de 2 litres alimenté en continu par de l'eau chaude. Un mitigeur assure la température optimale pour une irrigation douce et contrôlée du côlon.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Réservoir de 30,5 litres d'eau à 37°C",
-                  "Système de gravité à basse pression (0,7 PA)",
-                  "Débit moyen de 1,3 litres/minute",
-                  "Irrigation jusqu'au cæcum",
+                  "Réservoir de 2 litres",
+                  "Alimentation en continu par eau chaude",
+                  "Mitigeur pour température optimale",
+                  "Irrigation douce et contrôlée",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
