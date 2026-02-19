@@ -74,10 +74,10 @@ export default function OPrepAltesse() {
               O-PREP®ALTESSE
             </h1>
             <p className="text-2xl text-primary font-semibold mb-6">
-              Préparation coloscopique accessible et discrète
+              Solution d'hydro-lavage colique compacte et discrète
             </p>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Une solution légère et intégrée, pensée pour les environnements où la simplicité et l'accessibilité sont prioritaires.
+              Un système légèr d'irrigation du côlon, pensé pour les environnements où la simplicité et l'accessibilité sont prioritaires.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -110,16 +110,16 @@ export default function OPrepAltesse() {
               />
             </div>
             <div className="flex-1">
-              <h2 className="text-4xl font-bold text-foreground mb-8">Une solution légérée et accessible</h2>
+              <h2 className="text-4xl font-bold text-foreground mb-8">Hydro-lavage colique par gravité</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                O-PREP®ALTESSE est une solution allégée et discrète conçue pour faciliter la préparation à la coloscopie en remplacçant simplement la cuvétte de WC traditionnelle.
+                O-PREP®ALTESSE utilise le même système d'irrigation par gravité que le DIVAN : 30,5 litres d'eau à 37°C, positionnés à 90 cm au-dessus du bassin. Basse pression (0,7 PA), débit de 1,3 litres/minute, irrigation jusqu'au cæcum.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Installation simple et rapide",
-                  "Remplacement direct de la cuvétte",
-                  "Discrétion et confort du patient",
-                  "Facilité d'utilisation pour les soignants",
+                  "Réservoir de 30,5 litres d'eau à 37°C",
+                  "Système de gravité à basse pression (0,7 PA)",
+                  "Débit moyen de 1,3 litres/minute",
+                  "Irrigation jusqu'au cæcum",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />

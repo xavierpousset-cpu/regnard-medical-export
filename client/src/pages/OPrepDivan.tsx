@@ -74,10 +74,10 @@ export default function OPrepDivan() {
               O-PREP®DIVAN
             </h1>
             <p className="text-2xl text-primary font-semibold mb-6">
-              Optimiser la préparation coloscopique, en toute sécurité
+              Solution d'hydro-lavage colique haute performance
             </p>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Une solution ergonomique pensée pour les patients fragiles et les équipes soignantes.
+              Un système complet d'irrigation du côlon par gravité, conçu pour les patients fragiles et les équipes soignantes en EHPAD et milieu hospitalier.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -110,16 +110,16 @@ export default function OPrepDivan() {
               />
             </div>
             <div className="flex-1">
-              <h2 className="text-4xl font-bold text-foreground mb-8">Une solution complète et professionnelle</h2>
+              <h2 className="text-4xl font-bold text-foreground mb-8">Caractéristiques techniques</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                O-PREP®DIVAN est un système intégré conçu pour offrir une expérience de préparation coloscopique optimale, combinant sécurité, confort et efficacité.
+                O-PREP®DIVAN utilise un réservoir de 30,5 litres d'eau portée à 37°C, positionné à 90 cm au-dessus du bassin du patient. Par principe de gravité et à basse pression (0,7 PA), l'eau irrigue le côlon jusqu'au cæcum avec un débit moyen de 1,3 litres/minute.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Système automatisé et contrôlé",
-                  "Interface intuitive et ergonomique",
-                  "Protocoles de sécurité avancés",
-                  "Adaptabilité aux besoins spécifiques",
+                  "Réservoir de 30,5 litres d'eau à 37°C",
+                  "Système de gravité à basse pression (0,7 PA)",
+                  "Débit moyen de 1,3 litres/minute",
+                  "Irrigation jusqu'au cæcum",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
