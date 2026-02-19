@@ -8,13 +8,12 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { useLocation } from "wouter";
 
 const navItems = [
-  { label: "Expertise", href: "#expertise" },
-  { label: "Solutions", href: "#solutions" },
-  { label: "Valeurs", href: "#valeurs" },
-  { label: "À propos", href: "#about" },
+  { label: "Expertise", href: "#expertise", isExternal: false },
+  { label: "Solutions", href: "/oprep-divan", isExternal: true },
+  { label: "Valeurs", href: "#valeurs", isExternal: false },
+  { label: "À propos", href: "#about", isExternal: false },
 ];
 
 export default function Header() {
@@ -24,9 +23,6 @@ export default function Header() {
     setMobileMenuOpen(false);
     if (href === "#expertise") {
       document.querySelector("section")?.nextElementSibling?.scrollIntoView({ behavior: "smooth" });
-    } else if (href === "#solutions") {
-      const sections = document.querySelectorAll("section");
-      sections[2]?.scrollIntoView({ behavior: "smooth" });
     } else if (href === "#valeurs") {
       const sections = document.querySelectorAll("section");
       sections[3]?.scrollIntoView({ behavior: "smooth" });
@@ -70,8 +66,10 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
+                  if (!item.isExternal) {
+                    e.preventDefault();
+                    scrollToSection(item.href);
+                  }
                 }}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150"
               >
@@ -110,8 +108,10 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(item.href);
+                    if (!item.isExternal) {
+                      e.preventDefault();
+                      scrollToSection(item.href);
+                    }
                   }}
                   className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors duration-150"
                 >
