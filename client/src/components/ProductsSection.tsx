@@ -11,7 +11,7 @@ import { CheckCircle2 } from "lucide-react";
 const products = [
   {
     name: "O-PREP®DIVAN",
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/uiTjabSYYNgTglzC.png",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/oQnUdzYkDmIvSQLP.svg",
     benefits: [
       "Ergonomie optimisée pour le praticien",
       "Fiabilité éprouvée en environnement hospitalier",
