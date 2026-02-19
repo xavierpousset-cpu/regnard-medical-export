@@ -37,7 +37,7 @@ export default function ValuesSection() {
 
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
-          Les fondations de notre engagement
+          Nos engagements
         </h2>
 
         {/* Grid */}
