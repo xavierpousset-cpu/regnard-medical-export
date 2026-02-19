@@ -21,12 +21,12 @@ export default function EhpadStudySection() {
 
           {/* Titre principal */}
           <h2 className="text-4xl font-bold text-foreground mb-6 leading-tight">
-            Directeur d'EHPAD? Participez à notre étude sur la prise en charge de l'inconfort digestif au sein des EHPAD
+            Directeur d'EHPAD? Participez à notre étude sur la prise en charge de l'inconfort digestif.
           </h2>
 
           {/* Texte descriptif */}
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Nous menons une étude sur la gestion des troubles du transit (constipation sévère, fécalomes) au sein de votre établissement. L'objectif est de valider l'apport d'une nouvelle solution d'irrigation automatisée pour améliorer le confort des résidents et simplifier le travail des soignants.
+            Nous menons une étude sur la gestion des troubles du transit (constipation sévère, fécalomes). L'objectif est de valider l'apport de notre nouvelle solution d'irrigation automatisée pour améliorer le confort des résidents et simplifier le travail des soignants.
           </p>
 
           {/* Bouton d'action */}
