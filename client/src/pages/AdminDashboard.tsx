@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { trpc } from "@/lib/trpc";
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import { Search, Download, Loader2, AlertCircle } from "lucide-react";
 import { useLocation } from "wouter";
 import { toast } from "sonner";
@@ -253,6 +253,12 @@ export default function AdminDashboard() {
   const [, setLocation] = useLocation();
 
   // Rediriger si non authentifié ou non admin
+  useEffect(() => {
+    if (!loading && (!isAuthenticated || user?.role !== "admin")) {
+      setLocation("/");
+    }
+  }, [loading, isAuthenticated, user?.role, setLocation]);
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -262,7 +268,6 @@ export default function AdminDashboard() {
   }
 
   if (!isAuthenticated || user?.role !== "admin") {
-    setLocation("/");
     return null;
   }
 
