@@ -132,6 +132,47 @@ export default function OPrepDivan() {
         </div>
       </section>
 
+      {/* Product Gallery */}
+      <section className="py-24 bg-background">
+        <div className="container">
+          <h2 className="font-bold text-foreground mb-16 text-center">
+            Le produit en action
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/rckyYSDxtkStRwPG.JPG"
+                alt="O-PREP DIVAN - Vue d'ensemble du système"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-4 bg-secondary">
+                <p className="text-sm text-muted-foreground">Système complet avec interface de contrôle</p>
+              </div>
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/jkVcvbGvPGKbvxTQ.JPG"
+                alt="O-PREP DIVAN - Installation en atelier"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-4 bg-secondary">
+                <p className="text-sm text-muted-foreground">Installation et configuration du système</p>
+              </div>
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/wsnAjuGFpScEqZaO.JPG"
+                alt="O-PREP DIVAN - Détail du bassin ergonomique"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-4 bg-secondary">
+                <p className="text-sm text-muted-foreground">Bassin ergonomique et rampes de sécurité</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Product Description */}
       <section className="py-24 bg-secondary">
         <div className="container">
