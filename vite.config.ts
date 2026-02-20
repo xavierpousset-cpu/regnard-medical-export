@@ -181,6 +181,9 @@ export default defineConfig({
       },
     },
   },
+  optimizeDeps: {
+    exclude: ['@trpc/react-query', '@trpc/client'],
+  },
   server: {
     host: true,
     hmr: {
