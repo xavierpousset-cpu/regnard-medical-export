@@ -1,0 +1,21 @@
+# Robots.txt for Regnard Medical
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /__manus__/
+
+# Sitemaps
+Sitemap: https://regnard-medical.manus.space/sitemap.xml
+
+# Crawl delay (in seconds)
+Crawl-delay: 1
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
