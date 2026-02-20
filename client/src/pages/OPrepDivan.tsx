@@ -180,7 +180,8 @@ export default function OPrepDivan() {
             <h2 className="font-bold text-foreground mb-8">Une solution ergonomique pensée pour le terrain</h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                O-PREP®DIVAN est un dispositif ergonomique conçu pour faciliter la préparation à la coloscopie, notamment chez les patients âgés ou à mobilité réduite. Pensé pour les environnements EHPAD et hospitaliers, il améliore significativement la qualité des soins et la sécurité des patients.
+                O-PREP®DIVAN est un dispositif ergonomique, pensé pour les environnements EHPAD et hospitaliers.
+Il améliore significativement la qualité des soins et la sécurité des patients.
               </p>
               <div className="bg-secondary p-8 rounded-lg border border-border">
                 <h3 className="font-semibold text-foreground mb-6">Améliore :</h3>
