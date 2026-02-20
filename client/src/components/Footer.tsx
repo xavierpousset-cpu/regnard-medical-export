@@ -16,7 +16,7 @@ export default function Footer() {
               REGNARD MEDICAL
             </h3>
             <p className="text-sm text-background/70 leading-relaxed mb-4">
-              {t('hero.title')}
+              [Texte]
             </p>
             <p className="text-xs text-background/60">
               Division de <a href="https://www.regnardtechnologie.com/" target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors duration-150 underline">Regnard Technologie</a>
@@ -56,14 +56,14 @@ export default function Footer() {
         <div className="pt-8 border-t border-background/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-background/60">
-              © {new Date().getFullYear()} {t('footer.company')}. {t('footer.copyright')}
+              © {new Date().getFullYear()} [Texte]. [Texte]
             </p>
             <div className="flex gap-6 text-sm text-background/60">
               <a href="/mentions-legales" className="hover:text-background transition-colors duration-150">
-                {t('footer.legal')}
+                [Texte]
               </a>
               <a href="/politique-confidentialite" className="hover:text-background transition-colors duration-150">
-                {t('footer.privacy')}
+                [Texte]
               </a>
             </div>
           </div>

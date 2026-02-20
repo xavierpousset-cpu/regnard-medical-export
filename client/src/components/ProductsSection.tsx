@@ -42,7 +42,7 @@ export default function ProductsSection() {
       <div className="container">
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
-          {t('products.title')}
+          [Texte]
         </h2>
 
         {/* Products */}
@@ -91,7 +91,7 @@ export default function ProductsSection() {
                   }}
                   className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors duration-150"
                 >
-                  {t('products.cta')}
+                  [Texte]
                 </Button>
               </div>
             </div>

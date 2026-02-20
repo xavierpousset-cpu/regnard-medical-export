@@ -46,7 +46,7 @@ export default function ExpertiseSection() {
       <div className="container">
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
-          {t('expertise.title')}
+          [Texte]
         </h2>
 
         {/* Grid */}

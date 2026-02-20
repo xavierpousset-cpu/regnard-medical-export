@@ -9,7 +9,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, LogOut } from "lucide-react";
 import { useState } from "react";
-import { useAuth } from "@/_core/hooks/useAuth";
+
 import { getLoginUrl } from "@/const";
 import { useLocation } from "wouter";
 
@@ -32,7 +32,9 @@ const navItems = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
-  const { user, isAuthenticated, logout } = useAuth();
+  // Auth disabled - using simple login URL instead
+  const isAuthenticated = false;
+  const user = null;
   const [, setLocation] = useLocation();
 
   const scrollToSection = (href: string) => {
@@ -289,6 +291,7 @@ export default function Header() {
 }
 
 function LanguageSelector() {
+  const [language, setLanguage] = useState('fr');
 
   return (
     <div className="relative group">
