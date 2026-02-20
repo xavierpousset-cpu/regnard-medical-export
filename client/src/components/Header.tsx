@@ -8,6 +8,7 @@
 
 import { Suspense } from "react";
 import { HeaderContent } from "./HeaderContent";
+import { HeaderErrorBoundary } from "./HeaderErrorBoundary";
 
 // Fallback header sans contexte tRPC
 function HeaderFallback() {
@@ -65,8 +66,10 @@ function HeaderFallback() {
 
 export default function Header() {
   return (
-    <Suspense fallback={<HeaderFallback />}>
-      <HeaderContent />
-    </Suspense>
+    <HeaderErrorBoundary>
+      <Suspense fallback={<HeaderFallback />}>
+        <HeaderContent />
+      </Suspense>
+    </HeaderErrorBoundary>
   );
 }
