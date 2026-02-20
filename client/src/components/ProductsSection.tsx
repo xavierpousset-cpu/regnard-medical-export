@@ -85,7 +85,10 @@ export default function ProductsSection() {
 
                 <Button
                   variant="outline"
-                  onClick={() => navigate(product.link)}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    navigate(product.link);
+                  }}
                   className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors duration-150"
                 >
                   Découvrir nos solutions

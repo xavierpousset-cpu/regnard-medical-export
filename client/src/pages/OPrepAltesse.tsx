@@ -60,7 +60,7 @@ export default function OPrepAltesse() {
   };
 
   const scrollToSurvey = () => {
-    window.open("https://tally.so/r/ZjN5py?transparentBackground=1", "_blank");
+    window.location.href = "/regnard-technologie";
   };
 
   return (
