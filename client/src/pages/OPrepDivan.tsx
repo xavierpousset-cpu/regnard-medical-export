@@ -99,7 +99,7 @@ export default function OPrepDivan() {
       </section>
 
       {/* Product Image Section */}
-      <section className="py-24 bg-background">
+      <section className="py-12 md:py-24 bg-background">
         <div className="container">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1">
@@ -133,7 +133,7 @@ export default function OPrepDivan() {
       </section>
 
       {/* Product Gallery */}
-      <section className="py-24 bg-background">
+      <section className="py-12 md:py-24 bg-background">
         <div className="container">
           <h2 className="font-bold text-foreground mb-16 text-center">
             Le produit en préparation
@@ -174,7 +174,7 @@ export default function OPrepDivan() {
       </section>
 
       {/* Product Description */}
-      <section className="py-24 bg-secondary">
+      <section className="py-12 md:py-24 bg-secondary">
         <div className="container">
           <div className="max-w-4xl">
             <h2 className="font-bold text-foreground mb-8">Une solution ergonomique pensée pour le terrain</h2>
@@ -213,7 +213,7 @@ Il améliore significativement la qualité des soins et la sécurité des patien
       </section>
 
       {/* Specific Benefits */}
-      <section className="py-24 bg-secondary">
+      <section className="py-12 md:py-24 bg-secondary">
         <div className="container">
           <h2 className="font-bold text-foreground mb-16">Bénéfices spécifiques pour EHPAD et gériatrie</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -263,7 +263,7 @@ Il améliore significativement la qualité des soins et la sécurité des patien
       </section>
 
       {/* Organizational Impact */}
-      <section className="py-24 bg-background">
+      <section className="py-12 md:py-24 bg-background">
         <div className="container">
           <h2 className="font-bold text-foreground mb-8">Impact organisationnel pour les décideurs</h2>
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-3xl">
@@ -286,7 +286,7 @@ Il améliore significativement la qualité des soins et la sécurité des patien
       </section>
 
       {/* Trust & Validation */}
-      <section className="py-24 bg-secondary">
+      <section className="py-12 md:py-24 bg-secondary">
         <div className="container">
           <h2 className="font-bold text-foreground mb-12">Confiance & Validation</h2>
           <div className="max-w-3xl bg-background p-12 rounded-lg border-2 border-primary">
@@ -312,7 +312,7 @@ Il améliore significativement la qualité des soins et la sécurité des patien
       </section>
 
       {/* Survey Section */}
-      <section className="py-24 bg-background">
+      <section className="py-12 md:py-24 bg-background">
         <div className="container max-w-3xl">
           <h2 className="font-bold text-foreground mb-6">Participez à l'amélioration des pratiques</h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
@@ -328,7 +328,7 @@ Il améliore significativement la qualité des soins et la sécurité des patien
       </section>
 
       {/* Quote Form */}
-      <section id="devis-form" className="py-24 bg-secondary">
+      <section id="devis-form" className="py-12 md:py-24 bg-secondary">
         <div className="container max-w-2xl">
           <h2 className="font-bold text-foreground mb-12">Demander un devis personnalisé</h2>
           <form onSubmit={handleFormSubmit} className="space-y-6 bg-background p-8 rounded-lg border border-border">

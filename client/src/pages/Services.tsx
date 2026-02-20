@@ -138,7 +138,7 @@ export default function Services() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-16 bg-white">
+      <section className="py-6 md:py-16 bg-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-bold text-slate-900 mb-6">
@@ -237,7 +237,7 @@ export default function Services() {
       </section>
 
       {/* ADN Industriel */}
-      <section className="py-16 bg-white">
+      <section className="py-6 md:py-16 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-bold text-slate-900 mb-6">
@@ -297,7 +297,7 @@ export default function Services() {
       </section>
 
       {/* Bénéfices */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-6 md:py-16 bg-slate-50">
         <div className="container">
             <h2 className="font-bold text-slate-900 mb-12 text-center">
             Bénéfices pour vos établissements
@@ -318,7 +318,7 @@ export default function Services() {
       </section>
 
       {/* Partenaire de confiance */}
-      <section className="py-16 bg-white">
+      <section className="py-6 md:py-16 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-bold text-slate-900 mb-6">

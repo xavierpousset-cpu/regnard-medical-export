@@ -18,7 +18,7 @@ export default function About() {
       <Header />
       <main className="flex-1 pt-24">
         {/* Hero Section */}
-        <section className="py-24 bg-gradient-to-b from-secondary to-background">
+        <section className="py-12 md:py-24 bg-gradient-to-b from-secondary to-background">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-white mb-6">
@@ -32,7 +32,7 @@ export default function About() {
         </section>
 
         {/* L'Histoire Section */}
-        <section className="py-20 bg-background">
+        <section className="py-8 md:py-20 bg-background">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <h2 className="mb-12">
@@ -57,7 +57,7 @@ export default function About() {
         </section>
 
         {/* La Genèse d'O-PREP®DIVAN Section */}
-        <section className="py-20 bg-secondary/5">
+        <section className="py-8 md:py-20 bg-secondary/5">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <h2 className="mb-12">
@@ -78,7 +78,7 @@ export default function About() {
         </section>
 
         {/* Notre ADN Section */}
-        <section className="py-20 bg-background">
+        <section className="py-8 md:py-20 bg-background">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <h2 className="mb-16">
@@ -130,7 +130,7 @@ export default function About() {
         </section>
 
         {/* Vision & Engagement Section */}
-        <section className="py-20 bg-secondary/5">
+        <section className="py-8 md:py-20 bg-secondary/5">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <h2 className="mb-12">
@@ -172,7 +172,7 @@ export default function About() {
         </section>
 
         {/* Ancrage & Fabrication Section */}
-        <section className="py-20 bg-background">
+        <section className="py-8 md:py-20 bg-background">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <h2 className="mb-12">
@@ -221,7 +221,7 @@ export default function About() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-secondary">
+        <section className="py-8 md:py-20 bg-secondary">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-white mb-6">

@@ -61,7 +61,7 @@ export default function ContactPage() {
       <Header />
       <main className="flex-1 pt-24">
         {/* Hero Section */}
-        <section className="py-20 bg-secondary">
+        <section className="py-8 md:py-20 bg-secondary">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-white mb-6">
@@ -75,7 +75,7 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 bg-background">
+        <section className="py-8 md:py-20 bg-background">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Left column - Info & Contact Details */}
