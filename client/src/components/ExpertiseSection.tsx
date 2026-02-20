@@ -7,31 +7,32 @@
  */
 
 import { Wrench, FlaskConical, Ruler } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const expertiseItems = [
+const getExpertiseItems = (t: (key: string) => string) => [
   {
     icon: Wrench,
-    title: "Réparation",
+    title: t('expertise.repair'),
     items: [
-      "Maintenance spécialisée",
+      t('expertise.repair.desc'),
       "Remise en conformité",
       "Prolongation du cycle de vie",
     ],
   },
   {
     icon: FlaskConical,
-    title: "Recherche & Développement",
+    title: t('expertise.research'),
     items: [
-      "Conception de solutions techniques",
+      t('expertise.research.desc'),
       "Prototypage",
       "Optimisation fonctionnelle",
     ],
   },
   {
     icon: Ruler,
-    title: "Bureau d'Études",
+    title: t('expertise.studies'),
     items: [
-      "Analyse technique",
+      t('expertise.studies.desc'),
       "Amélioration produit",
       "Développement sur mesure",
     ],
@@ -39,12 +40,15 @@ const expertiseItems = [
 ];
 
 export default function ExpertiseSection() {
+  const { t } = useLanguage();
+  const expertiseItems = getExpertiseItems(t);
+  
   return (
     <section className="py-32 bg-background">
       <div className="container">
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
-          Une expertise technique complète au service de vos équipements médicaux
+          {t('expertise.title')}
         </h2>
 
         {/* Grid */}

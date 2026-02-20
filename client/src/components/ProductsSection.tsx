@@ -8,6 +8,7 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import { useLocation } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const products = [
   {
@@ -36,13 +37,14 @@ const products = [
 
 export default function ProductsSection() {
   const [, navigate] = useLocation();
+  const { t } = useLanguage();
 
   return (
     <section className="py-32 bg-secondary">
       <div className="container">
         {/* Title */}
         <h2 className="mb-20 max-w-2xl">
-          Des solutions techniques conçues pour l'excellence opérationnelle
+          {t('products.title')}
         </h2>
 
         {/* Products */}
@@ -91,7 +93,7 @@ export default function ProductsSection() {
                   }}
                   className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors duration-150"
                 >
-                  Découvrir nos solutions
+                  {t('products.cta')}
                 </Button>
               </div>
             </div>

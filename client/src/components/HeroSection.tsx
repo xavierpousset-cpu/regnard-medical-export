@@ -8,8 +8,10 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HeroSection() {
+  const { t } = useLanguage();
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
     contactSection?.scrollIntoView({ behavior: "smooth" });
@@ -33,16 +35,16 @@ export default function HeroSection() {
         <div className="max-w-3xl">
           {/* Main Title */}
           <h1 className="text-white mb-6 tracking-tight">
-            Expertise et Innovation au service du Médical
+            {t('hero.title')}
           </h1>
 
           {/* Subtitle */}
           <div className="mb-12">
             <p className="text-xl text-white/90 font-medium mb-2">
-              Réparation • Recherche • Développement
+              {t('hero.subtitle')}
             </p>
             <p className="text-lg text-white/80">
-              Partenaire technique des établissements de santé
+              {t('hero.description')}
             </p>
           </div>
 
@@ -53,7 +55,7 @@ export default function HeroSection() {
               onClick={scrollToContact}
               className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-150 text-base font-medium px-8 py-6"
             >
-              Demander un diagnostic
+              {t('hero.cta1')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
@@ -62,7 +64,7 @@ export default function HeroSection() {
               onClick={scrollToContact}
               className="border-2 border-white text-white hover:bg-white hover:text-foreground transition-colors duration-150 text-base font-medium px-8 py-6 bg-transparent"
             >
-              Nous contacter
+              {t('hero.cta2')}
             </Button>
           </div>
         </div>
