@@ -122,11 +122,7 @@ export default function Header() {
               </div>
             ))}
             {/* Language Selector */}
-            <div className="relative group">
-              <button className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center gap-2">
-                <LanguageSelector />
-              </button>
-            </div>
+            <LanguageSelector />
 
             <Button
               size="sm"
@@ -298,10 +294,10 @@ function LanguageSelector() {
 
   return (
     <div className="relative group">
-      <button className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center gap-2">
+      <div className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center gap-2 cursor-pointer">
         {language === 'fr' ? '🇫🇷 FR' : '🇬🇧 EN'}
         <ChevronDown className="h-4 w-4" />
-      </button>
+      </div>
       <div className="absolute right-0 mt-0 w-32 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
         <button
           onClick={() => setLanguage('fr')}
