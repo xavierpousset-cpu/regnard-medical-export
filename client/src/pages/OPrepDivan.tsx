@@ -136,7 +136,7 @@ export default function OPrepDivan() {
       <section className="py-24 bg-background">
         <div className="container">
           <h2 className="font-bold text-foreground mb-16 text-center">
-            Le produit en action
+            Le produit en préparation
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
