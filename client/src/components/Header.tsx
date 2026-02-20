@@ -12,7 +12,6 @@ import { useState } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { getLoginUrl } from "@/const";
 import { useLocation } from "wouter";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 const navItems = [
   {
@@ -290,7 +289,6 @@ export default function Header() {
 }
 
 function LanguageSelector() {
-  const { language, setLanguage } = useLanguage();
 
   return (
     <div className="relative group">

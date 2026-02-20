@@ -8,7 +8,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import { useLocation } from "wouter";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 const products = [
   {
@@ -37,7 +36,6 @@ const products = [
 
 export default function ProductsSection() {
   const [, navigate] = useLocation();
-  const { t } = useLanguage();
 
   return (
     <section className="py-12 md:py-32 bg-secondary">

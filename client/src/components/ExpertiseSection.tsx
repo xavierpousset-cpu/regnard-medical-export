@@ -7,7 +7,6 @@
  */
 
 import { Wrench, FlaskConical, Ruler } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 const getExpertiseItems = (t: (key: string) => string) => [
   {
@@ -40,7 +39,6 @@ const getExpertiseItems = (t: (key: string) => string) => [
 ];
 
 export default function ExpertiseSection() {
-  const { t } = useLanguage();
   const expertiseItems = getExpertiseItems(t);
   
   return (
