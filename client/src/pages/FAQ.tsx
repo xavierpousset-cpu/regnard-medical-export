@@ -1,8 +1,8 @@
-import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useState } from 'react';
 
 interface FAQItem {
   category: string;
@@ -128,6 +128,7 @@ const faqData: FAQItem[] = [
 
 export default function FAQ() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const { t } = useLanguage();
 
   const toggleExpand = (id: string) => {
     setExpandedId(expandedId === id ? null : id);
@@ -140,44 +141,42 @@ export default function FAQ() {
       <section className="py-20 pt-32 bg-gradient-to-br from-background to-secondary">
         <div className="container">
           <div className="max-w-3xl">
-            <h1 className="mb-6">Questions Fréquemment Posées</h1>
+            <h1 className="mb-6">{t('faq.hero.title')}</h1>
             <p className="text-xl text-muted-foreground">
-              Trouvez les réponses à vos questions sur nos services de maintenance, nos tarifs et nos conditions d'intervention.
+              {t('faq.hero.description')}
             </p>
           </div>
         </div>
       </section>
 
       {/* FAQ Content */}
-      <section className="py-20">
-        <div className="container max-w-3xl">
+      <section className="py-12 md:py-24 bg-background flex-1">
+        <div className="container max-w-4xl">
           <div className="space-y-12">
-            {faqData.map((category) => (
-              <div key={category.category}>
-                <h2 className="mb-8 font-bold text-foreground">
-                  {category.category}
+            {faqData.map((section) => (
+              <div key={section.category}>
+                <h2 className="text-2xl font-bold text-foreground mb-8">
+                  {section.category}
                 </h2>
-                
                 <div className="space-y-4">
-                  {category.questions.map((item) => (
+                  {section.questions.map((item) => (
                     <div
                       key={item.id}
-                      className="border border-border rounded-lg overflow-hidden transition-all duration-200 hover:border-accent"
+                      className="border border-border rounded-lg overflow-hidden transition-all duration-200"
                     >
                       <button
                         onClick={() => toggleExpand(item.id)}
-                        className="w-full px-6 py-4 flex items-center justify-between bg-card hover:bg-secondary transition-colors duration-150"
+                        className="w-full px-6 py-4 flex items-center justify-between bg-secondary hover:bg-secondary/80 transition-colors"
                       >
                         <h3 className="text-left font-semibold text-foreground">
                           {item.question}
                         </h3>
                         <ChevronDown
-                          className={`h-5 w-5 text-accent flex-shrink-0 transition-transform duration-200 ${
+                          className={`h-5 w-5 text-primary flex-shrink-0 transition-transform duration-200 ${
                             expandedId === item.id ? 'rotate-180' : ''
                           }`}
                         />
                       </button>
-
                       {expandedId === item.id && (
                         <div className="px-6 py-4 bg-background border-t border-border">
                           <p className="text-muted-foreground leading-relaxed">
@@ -191,32 +190,9 @@ export default function FAQ() {
               </div>
             ))}
           </div>
-
-          {/* CTA Section */}
-          <div className="mt-20 p-8 bg-secondary rounded-lg border border-border">
-            <h3 className="mb-4 font-bold text-foreground">
-              Vous n'avez pas trouvé votre réponse ?
-            </h3>
-            <p className="mb-6 text-muted-foreground">
-              Notre équipe est disponible pour répondre à toutes vos questions. N'hésitez pas à nous contacter directement.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="/contact"
-                className="px-6 py-3 bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors duration-150 inline-block text-center"
-              >
-                Nous Contacter
-              </a>
-              <a
-                href="/"
-                className="px-6 py-3 border border-border text-foreground font-semibold hover:bg-secondary transition-colors duration-150 inline-block text-center"
-              >
-                Retour à l'accueil
-              </a>
-            </div>
-          </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );

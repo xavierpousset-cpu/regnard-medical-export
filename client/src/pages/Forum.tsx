@@ -14,9 +14,11 @@ import { Loader2, MessageSquare, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Forum() {
   const { user, isAuthenticated } = useAuth();
+  const { t } = useLanguage();
   const [selectedTopic, setSelectedTopic] = useState<number | null>(null);
   const [newTopicTitle, setNewTopicTitle] = useState("");
   const [newTopicDescription, setNewTopicDescription] = useState("");
@@ -39,10 +41,10 @@ export default function Forum() {
       setNewTopicTitle("");
       setNewTopicDescription("");
       refetchTopics();
-      toast.success("Sujet créé avec succès");
+      toast.success(t('forum.topic_created'));
     },
     onError: (error) => {
-      toast.error(error.message || "Erreur lors de la création du sujet");
+      toast.error(error.message || t('common.error'));
     },
   });
 
@@ -50,26 +52,26 @@ export default function Forum() {
     onSuccess: () => {
       setNewPostContent("");
       refetchPosts();
-      toast.success("Message posté avec succès");
+      toast.success(t('forum.message_posted'));
     },
     onError: (error) => {
-      toast.error(error.message || "Erreur lors de la création du message");
+      toast.error(error.message || t('common.error'));
     },
   });
 
   const deletePostMutation = trpc.forum.deletePost.useMutation({
     onSuccess: () => {
       refetchPosts();
-      toast.success("Message supprimé");
+      toast.success(t('forum.message_deleted'));
     },
     onError: (error) => {
-      toast.error(error.message || "Erreur lors de la suppression");
+      toast.error(error.message || t('common.error'));
     },
   });
 
   const handleCreateTopic = async () => {
     if (!newTopicTitle.trim()) {
-      toast.error("Le titre du sujet est requis");
+      toast.error(t('forum.title_required'));
       return;
     }
     await createTopicMutation.mutateAsync({
@@ -80,11 +82,11 @@ export default function Forum() {
 
   const handleCreatePost = async () => {
     if (!selectedTopic) {
-      toast.error("Veuillez sélectionner un sujet");
+      toast.error(t('forum.topic_required'));
       return;
     }
     if (!newPostContent.trim()) {
-      toast.error("Le contenu du message est requis");
+      toast.error(t('forum.content_required'));
       return;
     }
     await createPostMutation.mutateAsync({
@@ -99,9 +101,9 @@ export default function Forum() {
       <main className="flex-1 pt-24">
         <div className="container py-12">
           <div className="mb-12">
-            <h1 className="font-bold text-foreground mb-2">Forum Médical</h1>
+            <h1 className="font-bold text-foreground mb-2">{t('forum.title.heading')}</h1>
             <p className="text-muted-foreground">
-              Espace d'échange pour le personnel médical. Partagez vos expériences, posez vos questions et discutez de sujets techniques.
+              {t('forum.title.description')}
             </p>
           </div>
 
@@ -112,7 +114,7 @@ export default function Forum() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <MessageSquare className="h-5 w-5" />
-                    Sujets
+                    {t('forum.topics')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
@@ -138,7 +140,7 @@ export default function Forum() {
                       </button>
                     ))
                   ) : (
-                    <p className="text-sm text-muted-foreground">Aucun sujet pour le moment</p>
+                    <p className="text-sm text-muted-foreground">{t('forum.no_topics')}</p>
                   )}
                 </CardContent>
               </Card>
@@ -147,16 +149,16 @@ export default function Forum() {
               {isAuthenticated && (
                 <Card className="mt-6">
                   <CardHeader>
-                    <CardTitle className="text-lg">Créer un sujet</CardTitle>
+                    <CardTitle className="text-lg">{t('forum.create_topic')}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <Input
-                      placeholder="Titre du sujet"
+                      placeholder={t('forum.topic_title')}
                       value={newTopicTitle}
                       onChange={(e) => setNewTopicTitle(e.target.value)}
                     />
                     <Textarea
-                      placeholder="Description (optionnel)"
+                      placeholder={t('forum.topic_description')}
                       value={newTopicDescription}
                       onChange={(e) => setNewTopicDescription(e.target.value)}
                       rows={3}
@@ -169,10 +171,10 @@ export default function Forum() {
                       {createTopicMutation.isPending ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                          Création...
+                          {t('forum.creating')}
                         </>
                       ) : (
-                        "Créer le sujet"
+                        t('forum.create_topic_button')
                       )}
                     </Button>
                   </CardContent>
@@ -203,7 +205,7 @@ export default function Forum() {
                           <CardContent className="pt-6">
                             <div className="flex justify-between items-start mb-3">
                               <div className="text-sm text-muted-foreground">
-                                Message #{post.id}
+                                {t('forum.message_number')}{post.id}
                               </div>
                               {(user?.role === 'moderator' || user?.role === 'admin' || user?.role === 'superadmin') && (
                                 <button
@@ -229,7 +231,7 @@ export default function Forum() {
                         </Card>
                       ))
                     ) : (
-                      <p className="text-muted-foreground text-center py-8">Aucun message pour le moment</p>
+                      <p className="text-muted-foreground text-center py-8">{t('forum.no_messages')}</p>
                     )}
                   </div>
 
@@ -237,11 +239,11 @@ export default function Forum() {
                   {isAuthenticated && (
                     <Card>
                       <CardHeader>
-                        <CardTitle className="text-lg">Ajouter un message</CardTitle>
+                        <CardTitle className="text-lg">{t('forum.add_message')}</CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-4">
                         <Textarea
-                          placeholder="Votre message..."
+                          placeholder={t('forum.your_message')}
                           value={newPostContent}
                           onChange={(e) => setNewPostContent(e.target.value)}
                           rows={4}
@@ -254,10 +256,10 @@ export default function Forum() {
                           {createPostMutation.isPending ? (
                             <>
                               <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                              Envoi...
+                              {t('forum.sending')}
                             </>
                           ) : (
-                            "Poster le message"
+                            t('forum.post_message')
                           )}
                         </Button>
                       </CardContent>
@@ -268,7 +270,7 @@ export default function Forum() {
                 <Card>
                   <CardContent className="pt-12 pb-12 text-center">
                     <MessageSquare className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
-                    <p className="text-muted-foreground">Sélectionnez un sujet pour voir les messages</p>
+                    <p className="text-muted-foreground">{t('forum.select_topic')}</p>
                   </CardContent>
                 </Card>
               )}
@@ -279,7 +281,7 @@ export default function Forum() {
             <Card className="mt-8 bg-secondary/50">
               <CardContent className="pt-6">
                 <p className="text-center text-muted-foreground mb-4">
-                  Connectez-vous pour participer aux discussions du forum
+                  {t('forum.login_required')}
                 </p>
               </CardContent>
             </Card>
