@@ -73,27 +73,27 @@ export default function OPrepDivan() {
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="font-bold text-foreground mb-6 leading-tight whitespace-nowrap">
-              O-PREP® DIVAN
+              {t('oprep_divan.hero.title')}
             </h1>
             <p className="text-2xl text-primary font-semibold mb-6">
-              Solution d'hydro-lavage colique haute performance
+              {t('oprep_divan.hero.subtitle')}
             </p>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Un système complet d'irrigation du côlon par gravité, conçu pour les patients fragiles et les équipes soignantes en EHPAD et milieu hospitalier.
+              {t('oprep_divan.hero.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 onClick={scrollToForm}
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-semibold"
               >
-                Demander un devis
+                {t('oprep_divan.hero.cta1')}
               </Button>
               <Button
                 onClick={scrollToSurvey}
                 variant="outline"
                 className="border-2 border-foreground px-8 py-6 text-base font-semibold"
               >
-                Participer à l'enquête terrain
+                {t('oprep_divan.hero.cta2')}
               </Button>
             </div>
           </div>
@@ -112,16 +112,16 @@ export default function OPrepDivan() {
               />
             </div>
             <div className="flex-1">
-              <h2 className="font-bold text-foreground mb-8">Caractéristiques techniques</h2>
+              <h2 className="font-bold text-foreground mb-8">{t('oprep_divan.technical.title')}</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                O-PREP®DIVAN utilise un réservoir de 30,5 litres d'eau portée à 37°C, positionné à 90 cm au-dessus du bassin du patient. Par principe de gravité et à basse pression (0,7 PA), l'eau irrigue le côlon jusqu'au cæcum avec un débit moyen de 1,3 litres/minute.
+                {t('oprep_divan.description.text')}
               </p>
               <ul className="space-y-4">
                 {[
-                  "Réservoir de 30,5 litres d'eau à 37°C",
-                  "Système de gravité à basse pression (0,7 PA)",
-                  "Débit moyen de 1,3 litres/minute",
-                  "Irrigation jusqu'au cæcum",
+                  t('oprep_divan.technical.item1'),
+                  t('oprep_divan.technical.item2'),
+                  t('oprep_divan.technical.item3'),
+                  t('oprep_divan.technical.item4'),
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
@@ -138,7 +138,7 @@ export default function OPrepDivan() {
       <section className="py-12 md:py-24 bg-background">
         <div className="container">
           <h2 className="font-bold text-foreground mb-16 text-center">
-            Le produit en préparation
+            {t('oprep_divan.features.heading')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">

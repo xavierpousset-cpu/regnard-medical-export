@@ -73,27 +73,27 @@ export default function OPrepAltesse() {
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="font-bold text-foreground mb-6 leading-tight whitespace-nowrap">
-              O-PREP® ALTESSE
+              {t('oprep_altesse.hero.title')}
             </h1>
             <p className="text-2xl text-primary font-semibold mb-6">
-              Solution d'hydro-lavage colique compacte et discrète
+              {t('oprep_altesse.hero.subtitle')}
             </p>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Un système légèr d'irrigation du côlon, pensé pour les environnements où la simplicité et l'accessibilité sont prioritaires.
+              {t('oprep_altesse.hero.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 onClick={scrollToForm}
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-semibold"
               >
-                Demander un devis
+                {t('oprep_altesse.hero.cta1')}
               </Button>
               <Button
                 onClick={scrollToSurvey}
                 variant="outline"
                 className="border-2 border-foreground px-8 py-6 text-base font-semibold"
               >
-                Participer à l'enquête terrain
+                {t('oprep_altesse.hero.cta2')}
               </Button>
             </div>
           </div>
@@ -112,16 +112,16 @@ export default function OPrepAltesse() {
               />
             </div>
             <div className="flex-1">
-              <h2 className="font-bold text-foreground mb-8">Hydro-lavage colique compact et continu</h2>
+              <h2 className="font-bold text-foreground mb-8">{t('oprep_altesse.description.heading')}</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                O-PREP®ALTESSE est une solution compacte avec un réservoir de 2 litres alimenté en continu par de l'eau chaude. Un mitigeur assure la température optimale pour une irrigation douce et contrôlée du côlon.
+                {t('oprep_altesse.description.text')}
               </p>
               <ul className="space-y-4">
                 {[
-                  "Réservoir de 2 litres",
-                  "Alimentation en continu par eau chaude",
-                  "Mitigeur pour température optimale",
-                  "Irrigation douce et contrôlée",
+                  t('oprep_altesse.technical.item1'),
+                  t('oprep_altesse.technical.item2'),
+                  t('oprep_altesse.technical.item3'),
+                  t('oprep_altesse.technical.item4'),
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
@@ -138,13 +138,13 @@ export default function OPrepAltesse() {
       <section className="py-12 md:py-24 bg-secondary">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="font-bold text-foreground mb-8">Une solution légère et intégrée</h2>
+            <h2 className="font-bold text-foreground mb-8">{t('oprep_altesse.description.heading')}</h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                O-PREP®ALTESSE est une solution allégée et discrète. En remplaçant simplement la cuvette de WC traditionnelle, elle offre une approche moins invasive et plus accessible, particulièrement adaptée aux environnements où l'installation d'équipements complets n'est pas possible.
+                {t('oprep_altesse.description.text')}
               </p>
               <div className="bg-secondary p-8 rounded-lg border border-border">
-                <h3 className="font-semibold text-foreground mb-6">Caractéristiques principales :</h3>
+                <h3 className="font-semibold text-foreground mb-6">{t('oprep_altesse.features.heading')}</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />

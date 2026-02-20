@@ -798,5 +798,38 @@ export const translations = {
     'expertise.studies.item3': 'Custom development',
     'header.admin_dashboard': 'Admin Dashboard',
 
+    // ===== FOOTER =====
+    'footer.services': 'Services',
+    'footer.repair': 'Réparation de dispositifs médicaux',
+    'footer.maintenance': 'Maintenance biomédicale',
+    'footer.research': 'Recherche & Développement',
+    'footer.engineering': 'Bureau d\'études médical',
+    'footer.solutions': 'Solutions techniques sur mesure',
+    'footer.expertise_title': 'Expertise',
+    'footer.medtech': 'MedTech France',
+    'footer.optimization': 'Optimisation équipements hospitaliers',
+    'footer.compliance': 'Conformité dispositifs médicaux',
+    'footer.innovation': 'Innovation médicale',
+    'footer.partner': 'Partenaire établissements de santé',
+
+    // ===== O-PREP DIVAN PAGE =====
+    'oprep_divan.benefits.title': 'Avantages clés',
+    'oprep_divan.benefits.safety': 'Sécurité maximale',
+    'oprep_divan.benefits.safety_desc': 'Système fermé avec contrôles de sécurité intégrés',
+    'oprep_divan.benefits.comfort': 'Confort patient',
+    'oprep_divan.benefits.comfort_desc': 'Irrigation douce et progressive',
+    'oprep_divan.benefits.efficiency': 'Efficacité',
+    'oprep_divan.benefits.efficiency_desc': 'Résultats rapides et fiables',
+    'oprep_divan.benefits.team': 'Facilité d\'utilisation',
+    'oprep_divan.benefits.team_desc': 'Formation simple, protocoles clairs',
+    'oprep_divan.technical.title': 'Caractéristiques techniques',
+    'oprep_divan.technical.item1': 'Système d\'irrigation par gravité haute performance',
+    'oprep_divan.technical.item2': 'Réservoir de 5 litres',
+    'oprep_divan.technical.item3': 'Température de l\'eau contrôlée',
+    'oprep_divan.technical.item4': 'Irrigation douce et progressive',
+    'oprep_divan.description.heading': 'Une solution complète et ergonomique',
+    'oprep_divan.description.text': 'O-PREP®DIVAN est une solution complète d\'hydro-lavage colique conçue pour les EHPAD et les services gériatriques. Son design ergonomique facilite l\'utilisation par les équipes soignantes tout en garantissant le confort et la sécurité des patients.',
+    'oprep_divan.features.heading': 'Caractéristiques principales:',
+
   }
 };
