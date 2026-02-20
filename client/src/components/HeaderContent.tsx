@@ -6,7 +6,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, LogOut } from "lucide-react";
 import { useState } from "react";
-import { useAuthSafe } from "@/_core/hooks/useAuthSafe";
+import { useAuth } from "@/_core/hooks/useAuth";
 import { getLoginUrl } from "@/const";
 import { useLocation } from "wouter";
 
@@ -29,7 +29,7 @@ const navItems = [
 export function HeaderContent() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
-  const { user, isAuthenticated, logout } = useAuthSafe();
+  const { user, isAuthenticated, logout } = useAuth();
   const [, setLocation] = useLocation();
 
   const scrollToSection = (href: string) => {
