@@ -42,7 +42,7 @@ export default function LegalNotice() {
                 – REGNARD MEDICAL, 9 LE HANOY 27250 RUGLES
               </p>
               <p>
-                <strong>Créateur :</strong> Xavier Pousset
+                <strong>Créateur :</strong> Ocean Communication
               </p>
               <p>
                 <strong>Responsable publication :</strong> Julie FLORIN REGNARD

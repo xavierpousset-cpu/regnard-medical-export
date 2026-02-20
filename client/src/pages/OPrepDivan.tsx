@@ -225,8 +225,8 @@ Il améliore significativement la qualité des soins et la sécurité des patien
               },
               {
                 icon: Heart,
-                title: "Respect du patient",
-                description: "Maintien du confort du patient tout au long du processus.",
+                title: "Respect de la dignité",
+                description: "Maintien du confort et de la pudeur du patient tout au long du processus.",
               },
               {
                 icon: Users,

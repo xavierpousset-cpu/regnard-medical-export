@@ -122,13 +122,13 @@ export default function Services() {
               Un savoir-faire industriel au service des établissements de santé
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/demande-devis">
+              <Link href="/questionnaire">
                 <Button size="lg" className="gap-2">
                   Demander une intervention <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/demande-devis">
-                <Button size="lg" variant="outline" className="gap-2" style={{color: '#f8f8f7'}}>
+              <Link href="/questionnaire">
+                <Button size="lg" variant="outline" className="gap-2">
                   Obtenir un diagnostic <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
@@ -359,12 +359,12 @@ export default function Services() {
               Contactez-nous pour discuter de vos besoins spécifiques
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/demande-devis">
+              <Link href="/questionnaire">
                 <Button size="lg" variant="secondary" className="gap-2">
                   Planifier une intervention <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/demande-devis">
+              <Link href="/questionnaire">
                 <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 gap-2">
                   Demander un devis <ArrowRight className="h-4 w-4" />
                 </Button>
