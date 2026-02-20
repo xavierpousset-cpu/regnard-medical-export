@@ -15,6 +15,7 @@ import Forum from "./pages/Forum";
 import Services from "./pages/Services";
 import FAQ from "./pages/FAQ";
 import ContactPage from "./pages/ContactPage";
+import About from "./pages/About";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -29,6 +30,7 @@ function Router() {
       <Route path={"/services"} component={Services} />
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/contact"} component={ContactPage} />
+      <Route path={"/about"} component={About} />
       <Route path={"/mentions-legales"} component={LegalNotice} />
       <Route path={"/politique-confidentialite"} component={PrivacyPolicy} />
       <Route path={"/404"} component={NotFound} />

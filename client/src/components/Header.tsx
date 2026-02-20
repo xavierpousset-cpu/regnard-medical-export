@@ -26,7 +26,7 @@ const navItems = [
   { label: "Nos services", href: "/services", isExternal: false },
   { label: "Forum", href: "/forum", isExternal: false },
   { label: "FAQ", href: "/faq", isExternal: false },
-  { label: "À propos", href: "#about", isExternal: false },
+  { label: "À propos", href: "/about", isExternal: false },
 ];
 
 export default function Header() {
