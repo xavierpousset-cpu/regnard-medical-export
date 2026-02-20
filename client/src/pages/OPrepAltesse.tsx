@@ -139,7 +139,7 @@ export default function OPrepAltesse() {
             <h2 className="font-bold text-foreground mb-8">Une solution légère et intégrée</h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                O-PREP®ALTESSE est une solution allégée et discrète conçue pour faciliter la préparation à la coloscopie. En remplaçant simplement la cuvette de WC traditionnelle, elle offre une approche moins invasive et plus accessible, particulièrement adaptée aux environnements où l'installation d'équipements complets n'est pas possible.
+                O-PREP®ALTESSE est une solution allégée et discrète. En remplaçant simplement la cuvette de WC traditionnelle, elle offre une approche moins invasive et plus accessible, particulièrement adaptée aux environnements où l'installation d'équipements complets n'est pas possible.
               </p>
               <div className="bg-secondary p-8 rounded-lg border border-border">
                 <h3 className="font-semibold text-foreground mb-6">Caractéristiques principales :</h3>
