@@ -11,6 +11,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { trpc } from "@/lib/trpc";
 
 export default function OPrepDivan() {
   const [formData, setFormData] = useState({
@@ -29,29 +30,28 @@ export default function OPrepDivan() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const submitQuote = trpc.quotes.submit.useMutation();
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validation basique
-    if (!formData.name || !formData.email || !formData.establishment) {
-      toast.error("Veuillez remplir tous les champs obligatoires");
-      return;
+    try {
+      await submitQuote.mutateAsync(formData);
+      toast.success("Votre demande de devis a été envoyée. Réponse sous 48h ouvrées.");
+      setFormData({
+        name: "",
+        function: "",
+        establishment: "",
+        structureType: "",
+        email: "",
+        phone: "",
+        estimatedNeed: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error("Erreur lors de l'envoi de la demande. Veuillez réessayer.");
+      console.error(error);
     }
-    
-    // Simulation d'envoi
-    toast.success("Votre demande de devis a été envoyée. Réponse sous 48h ouvrées.");
-    
-    // Reset form
-    setFormData({
-      name: "",
-      function: "",
-      establishment: "",
-      structureType: "",
-      email: "",
-      phone: "",
-      estimatedNeed: "",
-      message: "",
-    });
   };
 
   const scrollToForm = () => {

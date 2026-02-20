@@ -38,11 +38,15 @@ export const appRouter = router({
       .mutation(async ({ input }) => {
         const result = await createQuoteRequest(input);
         
-        // Notifier le proprietaire
-        await notifyOwner({
-          title: "Nouvelle demande de devis",
-          content: `Nouvelle demande de ${input.function} de ${input.establishment}\n\nNom: ${input.name}\nEmail: ${input.email}\nTelephone: ${input.phone}\n\nMessage: ${input.message || "Aucun message"}`,
-        });
+        // Notifier le proprietaire avec gestion d'erreur
+        try {
+          await notifyOwner({
+            title: "Nouvelle demande de devis",
+            content: `Nouvelle demande de ${input.function} de ${input.establishment}\n\nNom: ${input.name}\nEmail: ${input.email}\n\nMessage: ${input.message || "Aucun message"}`,
+          });
+        } catch (error) {
+          console.error("Erreur notification:", error);
+        }
         
         return { success: true, id: (result as any).insertId || 0 };
       }),

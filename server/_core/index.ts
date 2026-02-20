@@ -43,7 +43,8 @@ async function startServer() {
     if (req.url.match(/\.(js|css|webp|png|jpg|jpeg|gif|svg|woff2|woff|ttf)$/)) {
       res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
     } else {
-      res.setHeader('Cache-Control', 'public, max-age=3600, must-revalidate');
+      // Dynamic responses must not be cached by proxies or CDNs
+      res.setHeader('Cache-Control', 'private, no-cache, no-store, must-revalidate');
     }
     next();
   });

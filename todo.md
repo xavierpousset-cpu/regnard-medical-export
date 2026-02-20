@@ -18,3 +18,21 @@
 - [ ] Section Témoignages clients
 - [x] Page FAQ avec questions sur maintenance et tarifs
 - [ ] Blog/Resources section
+
+## Bugs à Corriger (Session Actuelle)
+
+### Critiques (l'application ne peut pas démarrer / crashe)
+- [x] B-01 — Absence de TrpcProvider et QueryClientProvider
+- [x] B-02 — Composant EhpadStudySection manquant
+- [x] B-03 — Pages DemandeDevis.tsx et Services.tsx manquantes
+
+### Majeurs (fonctionnalités cassées ou risque de sécurité)
+- [x] B-04 — Authentification désactivée dans Header.tsx
+- [x] B-05 — Formulaire de devis non fonctionnel sur OPrepDivan.tsx
+- [x] B-06 — Mauvaise politique de cache HTTP (sécurité)
+
+### Mineurs / Qualité de code
+- [x] B-07 — Incohérences de rôles (AdminDashboard, superadmin)
+- [x] B-08 — Notifications sans gestion d'erreur
+- [x] B-09 — i18n incomplète
+- [x] B-10 — Relations BDD non définies

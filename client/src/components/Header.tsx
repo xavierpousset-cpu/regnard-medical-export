@@ -9,9 +9,10 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, LogOut } from "lucide-react";
 import { useState } from "react";
-
+import { useAuth } from "@/_core/hooks/useAuth";
 import { getLoginUrl } from "@/const";
 import { useLocation } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const navItems = [
   {
@@ -32,9 +33,7 @@ const navItems = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
-  // Auth disabled - using simple login URL instead
-  const isAuthenticated = false;
-  const user = null;
+  const { user, isAuthenticated, logout } = useAuth();
   const [, setLocation] = useLocation();
 
   const scrollToSection = (href: string) => {
@@ -154,7 +153,7 @@ export default function Header() {
                   )}
                   <button
                     onClick={() => {
-                      logout();
+                      logout?.();
                       setLocation('/');
                     }}
                     className="w-full text-left px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150 flex items-center gap-2 rounded-b-lg"
@@ -263,7 +262,7 @@ export default function Header() {
                   )}
                   <button
                     onClick={() => {
-                      logout();
+                      logout?.();
                       setMobileMenuOpen(false);
                       setLocation('/');
                     }}
@@ -291,7 +290,7 @@ export default function Header() {
 }
 
 function LanguageSelector() {
-  const [language, setLanguage] = useState('fr');
+  const { language, setLanguage } = useLanguage();
 
   return (
     <div className="relative group">
