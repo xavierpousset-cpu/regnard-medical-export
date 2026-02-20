@@ -11,7 +11,7 @@ export default function QuestionnaireEHPAD() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
-      <main className="flex-1 w-full">
+      <main className="flex-1 w-full pt-24">
         <iframe
           src="https://tally.so/r/ZjN5py?transparentBackground=1"
           width="100%"

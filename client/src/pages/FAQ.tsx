@@ -136,7 +136,7 @@ export default function FAQ() {
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-background to-secondary">
+      <section className="py-20 pt-32 bg-gradient-to-br from-background to-secondary">
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="mb-6">Questions Fréquemment Posées</h1>
