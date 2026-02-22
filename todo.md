@@ -30,3 +30,4 @@
 - [x] Créer des tests vitest pour quotes.submit - 4 TESTS PASSENT
 - [x] Appliquer les migrations de la base de données - APPLIQUÉES
 - [x] B-05: Corriger l'erreur "Unable to find tRPC Context" dans Header - CORRIGÉE
+- [x] B-06: Corriger le lien du questionnaire Tally sur la page d'accueil (erreur 404) - CORRIGÉ

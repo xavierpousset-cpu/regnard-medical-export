@@ -26,7 +26,7 @@ export default function EhpadStudySection() {
 
           {/* Bouton d'action */}
           <Button
-            onClick={() => navigate("/questionnaire")}
+            onClick={() => navigate("/questionnaire-ehpad")}
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
           >
             Répondre au questionnaire
