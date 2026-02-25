@@ -82,8 +82,16 @@ function vitePluginManusDebugCollector(): Plugin {
       if (process.env.NODE_ENV === "production") {
         return html;
       }
+      
+      // In Manus environment, disable Vite client to prevent WebSocket errors
+      let modifiedHtml = html;
+      if (process.env.VITE_APP_ID) {
+        // Remove @vite/client script injection
+        modifiedHtml = modifiedHtml.replace(/@vite\/client/g, '');
+      }
+      
       return {
-        html,
+        html: modifiedHtml,
         tags: [
           {
             tag: "script",
@@ -98,6 +106,14 @@ function vitePluginManusDebugCollector(): Plugin {
     },
 
     configureServer(server: ViteDevServer) {
+      // Disable Vite client in Manus environment
+      if (process.env.VITE_APP_ID) {
+        server.middlewares.use("/@vite/client", (req, res) => {
+          res.writeHead(204);
+          res.end();
+        });
+      }
+      
       // POST /__manus__/logs: Browser sends logs (written directly to files)
       server.middlewares.use("/__manus__/logs", (req, res, next) => {
         if (req.method !== "POST") {
@@ -153,6 +169,7 @@ function vitePluginManusDebugCollector(): Plugin {
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
 
 // Disable HMR in Manus environment (uses auto-detection)
+// In Manus, HMR is disabled because the browser cannot reach localhost:5173
 const hmrConfig = process.env.VITE_APP_ID ? false : {
   host: 'localhost',
   port: 5173,
@@ -160,6 +177,10 @@ const hmrConfig = process.env.VITE_APP_ID ? false : {
 };
 
 export default defineConfig({
+  define: {
+    __DEV__: process.env.NODE_ENV === 'development',
+    'process.env.VITE_APP_ID': JSON.stringify(process.env.VITE_APP_ID || ''),
+  },
   plugins,
   resolve: {
     alias: {
@@ -190,7 +211,9 @@ export default defineConfig({
   },
   server: {
     host: true,
+    middlewareMode: false,
     hmr: hmrConfig,
+    preTransformRequests: false,
     allowedHosts: [
       ".manuspre.computer",
       ".manus.computer",
@@ -198,6 +221,7 @@ export default defineConfig({
       ".manuscomputer.ai",
       ".manusvm.computer",
       ".manus.space",
+      ".us2.manus.computer",
       "localhost",
       "127.0.0.1",
     ],
@@ -205,8 +229,17 @@ export default defineConfig({
       strict: true,
       deny: ["**/.*"],
     },
+    watch: {
+      usePolling: true,
+      interval: 100,
+    },
   },
   ssr: {
     external: ['express'],
+    noExternal: process.env.VITE_APP_ID ? ['@vite/client'] : [],
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom'],
+    exclude: process.env.VITE_APP_ID ? ['@vite/client'] : [],
   },
 });

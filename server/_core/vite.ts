@@ -9,7 +9,7 @@ import viteConfig from "../../vite.config";
 export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
     middlewareMode: true,
-    hmr: { server },
+    hmr: false,
     allowedHosts: true as const,
   };
 
@@ -18,6 +18,11 @@ export async function setupVite(app: Express, server: Server) {
     configFile: false,
     server: serverOptions,
     appType: "custom",
+  });
+
+  // Block @vite/client requests to prevent WebSocket errors
+  app.use("/@vite/client", (req, res) => {
+    res.status(204).end();
   });
 
   app.use(vite.middlewares);
