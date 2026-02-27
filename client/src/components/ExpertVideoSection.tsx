@@ -4,7 +4,7 @@
  * YouTube video embedded with key takeaways
  */
 
-import { Clock, Lightbulb } from "lucide-react";
+import { Clock, Lightbulb, Play } from "lucide-react";
 
 export default function ExpertVideoSection() {
   const keyPoints = [
@@ -50,12 +50,23 @@ export default function ExpertVideoSection() {
             <div className="relative w-full bg-black rounded-2xl overflow-hidden shadow-lg">
               {/* YouTube Embed with Custom Thumbnail */}
               <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  src="https://www.youtube.com/embed/mqtNrQ7nJVQ?vi=1"
-                  title="Le mot du Gastro-entérologue : Pourquoi choisir O-PREP ?"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+                <img
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/WjZwdrEyxLaFMDbC.png"
+                  alt="Le mot du Gastro-entérologue"
+                  className="absolute top-0 left-0 w-full h-full object-cover cursor-pointer"
+                  onClick={() => {
+                    const iframe = document.createElement('iframe');
+                    iframe.className = 'absolute top-0 left-0 w-full h-full';
+                    iframe.src = 'https://www.youtube.com/embed/mqtNrQ7nJVQ?autoplay=1';
+                    iframe.title = 'Le mot du Gastro-entérologue : Pourquoi choisir O-PREP ?';
+                    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                    (iframe as any).allowFullScreen = true;
+                    const parent = (event?.target as HTMLElement)?.parentElement;
+                    if (parent) {
+                      parent.innerHTML = '';
+                      parent.appendChild(iframe);
+                    }
+                  }}
                 />
               </div>
             </div>
