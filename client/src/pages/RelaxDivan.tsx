@@ -125,8 +125,8 @@ export default function RelaxDivan() {
           <div className="max-w-2xl mx-auto">
             <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/LxKJJPguVzmcgPqP.png"
-                alt="RELAX DIVAN - Dispositif ergonomique"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663365995358/emZFRNSoPdeUeWX5JnxLkg/relax-divan-transparent-2f6PUb4NcsYSBsz4Kn7q7i.webp"
+                alt="RELAX DIVAN - Dispositif ergonomique avec fond transparent"
                 className="w-full h-auto"
               />
             </div>
