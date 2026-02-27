@@ -12,6 +12,7 @@ import { toast } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TechnicalSpecsSection from "@/components/TechnicalSpecsSection";
+import ExpertVideoSection from "@/components/ExpertVideoSection";
 import { trpc } from "@/lib/trpc";
 
 export default function OPrepDivan() {
@@ -314,6 +315,9 @@ Il améliore significativement la qualité des soins et la sécurité des patien
 
       {/* Technical Specifications & Compliance */}
       <TechnicalSpecsSection />
+
+      {/* Expert Video Section */}
+      <ExpertVideoSection />
 
       {/* Survey Section */}
       <section className="py-24 bg-background">
