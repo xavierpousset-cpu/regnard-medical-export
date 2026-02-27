@@ -11,6 +11,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TechnicalSpecsSection from "@/components/TechnicalSpecsSection";
 import { trpc } from "@/lib/trpc";
 
 export default function OPrepDivan() {
@@ -310,6 +311,9 @@ Il améliore significativement la qualité des soins et la sécurité des patien
           </div>
         </div>
       </section>
+
+      {/* Technical Specifications & Compliance */}
+      <TechnicalSpecsSection />
 
       {/* Survey Section */}
       <section className="py-24 bg-background">
