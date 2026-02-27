@@ -119,34 +119,16 @@ export default function RelaxDivan() {
         </div>
       </section>
 
-      {/* Product Gallery - 2 columns instead of 3 */}
+      {/* Product Gallery - Single Image */}
       <section className="py-24 bg-background">
         <div className="container">
-          <h2 className="font-bold text-foreground mb-16 text-center">
-            Deux versions adaptées à vos besoins
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="max-w-2xl mx-auto">
             <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
-                src="https://private-us-east-1.manuscdn.com/sessionFile/V8tu5qMPe1byRexDgMU2NQ/sandbox/xQ2GdWnAH0Pqv8tyJ7Xnf4-img-1_1772093394000_na1fn_cmVsYXgtZGl2YW4tcHJvZHVjdA.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvVjh0dTVxTVBlMWJ5UmV4RGdNVTJOUS9zYW5kYm94L3hRMkdkV25BSDBQcXY4dHlKN1huZjQtaW1nLTFfMTc3MjA5MzM5NDAwMF9uYTFmbl9jbVZzWVhndFpHbDJZVzR0Y0hKdlpIVmpkQS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=AzZvuMheB5xMLeJpjRn-HP-jQXzQ6Pwbjt~MY9q-cGGGkvrNDpigTgqWF4nPBCiX3zRyt2xlGxX96j4Cmgk~DHwT5HWp-aWq5zua2ZGba7nJGGXOO1eZ3HjeXyUYnTCHRXLE8aqD7RCDG5ekPPanbyzJlFbY5TA9UP7vFahD2EHZ0L7~Rf5t2GcegaaOfiwuJWgJFhZ1BfDx1qVR4jF7imMRzOte0LsWiImGN6NGPnLVsQWT5mTMbHi8GtULTBRs2aJR09Bce91DhsvBRD~gqxiug38VPTqAEaWKKK8MCla1czVOSouesThxKln5hJvjyjNbiXMIcZOm68PFOLusfg__"
-                alt="RELAX DIVAN - Produit isolé"
-                className="w-full h-64 object-cover"
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/LxKJJPguVzmcgPqP.png"
+                alt="RELAX DIVAN - Dispositif ergonomique"
+                className="w-full h-auto"
               />
-              <div className="p-4 bg-secondary">
-                <p className="text-sm font-semibold text-foreground mb-2">Le Produit</p>
-                <p className="text-sm text-muted-foreground">Dispositif ergonomique avec structure stable et rampes de sécurité intégrées.</p>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="https://private-us-east-1.manuscdn.com/sessionFile/V8tu5qMPe1byRexDgMU2NQ/sandbox/xQ2GdWnAH0Pqv8tyJ7Xnf4-img-2_1772093389000_na1fn_cmVsYXgtZGl2YW4tYmF0aHJvb20.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvVjh0dTVxTVBlMWJ5UmV4RGdNVTJOUS9zYW5kYm94L3hRMkdkV25BSDBQcXY4dHlKN1huZjQtaW1nLTJfMTc3MjA5MzM4OTAwMF9uYTFmbl9jbVZzWVhndFpHbDJZVzR0WW1GMGFISnZiMjAucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=S5N083oNGDPCxq6Zs7Cq1lsH0TCuO51yGFwwq~jAAT-kbn9uf1mHDcHFWs97VbRnwcYhlRIptq1LhjWE8GnLi2Uf1~fZSw39YBwgo6jFh4pnothkGaEuz~VZltxJDNe7ojCoGjcrXjuASBl1z9hrbXsp6hiVelXkR3udav3eXsHuV7B9--0Lw8xVgWTUiOc0NbNx2qTxJVgg2g8-yoX-vyOA8s9H7e-~xOGWP-bzWjzB7AXgAjYjRSNi0Um10T73xyehcuxlcjg4-M6mMJokHpmmkXuGGjEwdALQSET00owdsbkdOZwj0UOMqWp6MUw60pXy65UlGtTFKKphgX1~Lg__"
-                alt="RELAX DIVAN - Intégration en salle de bain"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-4 bg-secondary">
-                <p className="text-sm font-semibold text-foreground mb-2">En Contexte</p>
-                <p className="text-sm text-muted-foreground">Intégration réaliste dans une salle de bain EHPAD avec accompagnement soignant.</p>
-              </div>
             </div>
           </div>
         </div>
