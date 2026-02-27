@@ -91,7 +91,7 @@ export default function RelaxDivan() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/pBeOHGuDfdIaAYrg.png"
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/BicpGoUmDonRNbbt.png"
                 alt="RELAX DIVAN - Dispositif ergonomique"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -119,20 +119,7 @@ export default function RelaxDivan() {
         </div>
       </section>
 
-      {/* Product Gallery - Single Image */}
-      <section className="py-24 bg-background">
-        <div className="container">
-          <div className="max-w-2xl mx-auto">
-            <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/pBeOHGuDfdIaAYrg.png"
-                alt="RELAX DIVAN - Dispositif ergonomique avec fond transparent"
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Product Description */}
       <section className="py-24 bg-secondary">
