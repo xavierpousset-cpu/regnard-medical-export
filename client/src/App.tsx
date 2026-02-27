@@ -17,7 +17,7 @@ import FAQ from "./pages/FAQ";
 import ContactPage from "./pages/ContactPage";
 import About from "./pages/About";
 import DemandeDevis from "./pages/DemandeDevis";
-import RelaxDivan from "./pages/RelaxDivan";
+import OSanDivan from "./pages/OSanDivan";
 import Reparation from "./pages/Reparation";
 
 function Router() {
@@ -28,7 +28,8 @@ function Router() {
       <Route path={"/questionnaire-ehpad"} component={QuestionnaireEHPAD} />
       <Route path={"/oprep-divan"} component={OPrepDivan} />
       <Route path={"/oprep-altesse"} component={OPrepAltesse} />
-      <Route path={"/relax-divan"} component={RelaxDivan} />
+      <Route path={"/o-san-divan"} component={OSanDivan} />
+      <Route path={"/relax-divan"} component={OSanDivan} />
       <Route path={"/reparation"} component={Reparation} />
       <Route path={"/admin"} component={AdminDashboard} />
       <Route path={"/forum"} component={Forum} />

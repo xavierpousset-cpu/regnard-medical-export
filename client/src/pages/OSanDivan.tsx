@@ -1,5 +1,5 @@
 /**
- * RELAX DIVAN Product Page
+ * Le Divan O-SAN Product Page
  * Design: Industrial Minimalism with Human Touch (same as O-PREP DIVAN)
  * - Professional, reassuring, focused on safety and ease of use
  * - Adapted for EHPAD, geriatric services, and healthcare centers
@@ -13,7 +13,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { trpc } from "@/lib/trpc";
 
-export default function RelaxDivan() {
+export default function OSanDivan() {
   const [formData, setFormData] = useState({
     name: "",
     function: "",
@@ -67,7 +67,7 @@ export default function RelaxDivan() {
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="font-bold text-foreground mb-6 leading-tight whitespace-nowrap">
-              RELAX® DIVAN
+              Le Divan O-SAN
             </h1>
             <p className="text-2xl text-primary font-semibold mb-6">
               Solution sanitaire pour patients en position allongée
@@ -92,7 +92,7 @@ export default function RelaxDivan() {
             <div className="flex-1">
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/BicpGoUmDonRNbbt.png"
-                alt="RELAX DIVAN - Dispositif ergonomique"
+                alt="Le Divan O-SAN - Dispositif ergonomique"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>

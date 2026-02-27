@@ -16,9 +16,8 @@ const navItems = [
     href: "#",
     isExternal: false,
     submenu: [
-      { label: "Hygiène Allongée", href: "/relax-divan" },
-      { label: "Coloscopie", href: "#", hasNestedSubmenu: true },
-      { label: "Réparation", href: "/reparation" },
+      { label: "Produits médicaux", href: "#", hasCategory: true },
+      { label: "Services", href: "#", hasCategory: true },
     ],
   },
   { label: "Forum", href: "/forum", isExternal: false },
@@ -26,9 +25,15 @@ const navItems = [
   { label: "À propos", href: "/about", isExternal: false },
 ];
 
-const coloscopieSubmenu = [
-  { label: "O-PREP®DIVAN", href: "/oprep-divan" },
-  { label: "O-PREP®ALTESSE", href: "/oprep-altesse" },
+const produitsSubmenu = [
+  { label: "Le Divan O-SAN", href: "/o-san-divan" },
+  { label: "Le Divan O-PREP", href: "/oprep-divan" },
+  { label: "Le Trône O-PREP", href: "/oprep-altesse" },
+];
+
+const servicesSubmenu = [
+  { label: "Réparation", href: "/reparation" },
+  { label: "Lits médicalisés", href: "/services" },
 ];
 
 export function HeaderContent() {
@@ -63,6 +68,12 @@ export function HeaderContent() {
       // Sinon, rediriger vers la page de contact
       setLocation('/contact');
     }
+  };
+
+  const getSubmenuItems = (label: string) => {
+    if (label === "Produits médicaux") return produitsSubmenu;
+    if (label === "Services") return servicesSubmenu;
+    return [];
   };
 
   return (
@@ -111,19 +122,18 @@ export function HeaderContent() {
                   <div className="absolute left-0 mt-0 w-56 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     {item.submenu.map((subitem) => (
                       <div key={subitem.label} className="relative group/nested">
-                        <a
-                          href={subitem.href}
+                        <button
                           onClick={() => window.scrollTo(0, 0)}
-                          className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg flex items-center justify-between"
+                          className="w-full text-left block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg flex items-center justify-between"
                         >
                           {subitem.label}
-                          {subitem.hasNestedSubmenu && <ChevronDown className="h-4 w-4" />}
-                        </a>
+                          {subitem.hasCategory && <ChevronDown className="h-4 w-4" />}
+                        </button>
 
-                        {/* Nested Submenu for Coloscopie */}
-                        {subitem.hasNestedSubmenu && (
-                          <div className="absolute left-full top-0 ml-0 w-48 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200 z-50">
-                            {coloscopieSubmenu.map((nestedItem) => (
+                        {/* Nested Submenu for Categories */}
+                        {subitem.hasCategory && (
+                          <div className="absolute left-full top-0 ml-0 w-56 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200 z-50">
+                            {getSubmenuItems(subitem.label).map((nestedItem) => (
                               <a
                                 key={nestedItem.label}
                                 href={nestedItem.href}
@@ -244,7 +254,7 @@ export function HeaderContent() {
                         <div key={subitem.label}>
                           <button
                             onClick={() => {
-                              if (subitem.hasNestedSubmenu) {
+                              if (subitem.hasCategory) {
                                 setOpenNestedSubmenu(openNestedSubmenu === subitem.label ? null : subitem.label);
                               } else {
                                 window.scrollTo(0, 0);
@@ -255,7 +265,7 @@ export function HeaderContent() {
                             className="w-full text-left text-sm text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center justify-between"
                           >
                             {subitem.label}
-                            {subitem.hasNestedSubmenu && (
+                            {subitem.hasCategory && (
                               <ChevronDown
                                 className={`h-4 w-4 transition-transform duration-200 ${
                                   openNestedSubmenu === subitem.label ? "rotate-180" : ""
@@ -265,17 +275,17 @@ export function HeaderContent() {
                           </button>
 
                           {/* Mobile Nested Submenu */}
-                          {subitem.hasNestedSubmenu && openNestedSubmenu === subitem.label && (
+                          {subitem.hasCategory && openNestedSubmenu === subitem.label && (
                             <div className="mt-2 ml-4 space-y-2 border-l border-border pl-4">
-                              {coloscopieSubmenu.map((nestedItem) => (
+                              {getSubmenuItems(subitem.label).map((nestedItem) => (
                                 <a
                                   key={nestedItem.label}
                                   href={nestedItem.href}
-                                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors duration-150"
                                   onClick={() => {
                                     window.scrollTo(0, 0);
                                     setMobileMenuOpen(false);
                                   }}
+                                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors duration-150"
                                 >
                                   {nestedItem.label}
                                 </a>
@@ -288,23 +298,25 @@ export function HeaderContent() {
                   )}
                 </div>
               ))}
+
               <Button
+                size="sm"
                 onClick={handleContactClick}
-                className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-150 w-full"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-150 mt-4"
               >
                 Contact
               </Button>
 
               {/* Mobile Account Menu */}
               {isAuthenticated && user ? (
-                <div className="border-t border-border pt-4 mt-4 space-y-2">
-                  <div className="text-sm text-muted-foreground px-2">
+                <div className="border-t border-border pt-4 mt-4">
+                  <div className="text-sm text-muted-foreground mb-3">
                     {user.name || user.email}
                   </div>
                   {user.role === 'admin' && (
                     <a
                       href="/admin"
-                      className="block px-2 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-150"
+                      className="block text-sm text-muted-foreground hover:text-foreground transition-colors duration-150 mb-3"
                     >
                       Dashboard Admin
                     </a>
@@ -313,8 +325,9 @@ export function HeaderContent() {
                     onClick={() => {
                       logout();
                       setLocation('/');
+                      setMobileMenuOpen(false);
                     }}
-                    className="w-full text-left px-2 py-2 text-sm text-muted-foreground hover:text-foreground flex items-center gap-2 transition-colors duration-150"
+                    className="w-full text-left text-sm text-muted-foreground hover:text-foreground transition-colors duration-150 flex items-center gap-2"
                   >
                     <LogOut className="h-4 w-4" />
                     Déconnexion
@@ -322,6 +335,7 @@ export function HeaderContent() {
                 </div>
               ) : (
                 <Button
+                  size="sm"
                   variant="outline"
                   onClick={() => (window.location.href = getLoginUrl())}
                   className="w-full"

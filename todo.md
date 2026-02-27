@@ -41,3 +41,15 @@
   - [x] Ajouter route /relax-divan
   - [x] Ajouter navigation dans ProductsSection
   - [x] Tester formulaire de devis
+
+## Restructuration Menu et Renommage Produits
+- [x] Renommer RELAX DIVAN en "Le Divan O-SAN"
+  - [x] Renommer fichier RelaxDivan.tsx en OSanDivan.tsx
+  - [x] Mettre à jour les textes dans la page
+  - [x] Mettre à jour la route /relax-divan en /o-san-divan
+  - [x] Mettre à jour App.tsx avec la nouvelle route
+- [x] Restructurer le menu "Nos solutions"
+  - [x] Créer structure hiérarchique : Produits médicaux (O-SAN, O-PREP Divan, O-PREP Altesse)
+  - [x] Créer structure hiérarchique : Services (Réparation, Lits médicalisés)
+  - [x] Implémenter les sous-menus imbriqués dans HeaderContent.tsx
+  - [x] Tester la navigation desktop et mobile
