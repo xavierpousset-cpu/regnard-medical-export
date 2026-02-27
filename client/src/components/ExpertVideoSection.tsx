@@ -68,6 +68,12 @@ export default function ExpertVideoSection() {
                     }
                   }}
                 />
+                {/* Play Button Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="bg-white rounded-full p-4 shadow-lg hover:shadow-xl transition-shadow">
+                    <Play className="h-8 w-8 text-primary fill-primary" strokeWidth={0} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
