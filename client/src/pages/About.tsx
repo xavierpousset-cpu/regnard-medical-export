@@ -17,9 +17,20 @@ export default function About() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1 pt-24">
-        {/* Hero Section */}
-        <section className="py-24 bg-gradient-to-b from-secondary to-background">
-          <div className="container">
+        {/* Hero Section with Image */}
+        <section className="relative py-32 overflow-hidden">
+          {/* Background Image with Dark Overlay */}
+          <div className="absolute inset-0">
+            <img
+              src="/atelier-regnard.jpg"
+              alt="Atelier Regnard Medical"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
+
+          {/* Content */}
+          <div className="relative container z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-white mb-6">
                 Une expertise industrielle au service du soin

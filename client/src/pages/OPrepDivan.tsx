@@ -13,6 +13,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TechnicalSpecsSection from "@/components/TechnicalSpecsSection";
 import ExpertVideoSection from "@/components/ExpertVideoSection";
+import ComparisonSection from "@/components/ComparisonSection";
 import { trpc } from "@/lib/trpc";
 
 export default function OPrepDivan() {
@@ -312,6 +313,9 @@ Il améliore significativement la qualité des soins et la sécurité des patien
           </div>
         </div>
       </section>
+
+      {/* Comparison Section */}
+      <ComparisonSection />
 
       {/* Technical Specifications & Compliance */}
       <TechnicalSpecsSection />

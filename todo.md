@@ -53,3 +53,9 @@
   - [x] Créer structure hiérarchique : Services (Réparation, Lits médicalisés)
   - [x] Implémenter les sous-menus imbriqués dans HeaderContent.tsx
   - [x] Tester la navigation desktop et mobile
+
+## Corrections UX Prioritaires (Session actuelle)
+
+- [x] Corriger la visibilité du bouton de connexion sur la page Forum (déplacer en haut)
+- [x] Ajouter l'image atelier avec filtre noir sur la page À propos
+- [x] Déplacer le segment comparatif de la page d'accueil vers la page O-PREP DIVAN

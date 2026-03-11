@@ -7,7 +7,6 @@
  */
 
 import ContactSection from "@/components/ContactSection";
-import ComparisonSection from "@/components/ComparisonSection";
 import EhpadStudySection from "@/components/EhpadStudySection";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import Footer from "@/components/Footer";
@@ -25,7 +24,6 @@ export default function Home() {
         <HeroSection />
         <ExpertiseSection />
         <ProductsSection />
-        <ComparisonSection />
         <EhpadStudySection />
         <ValuesSection />
         <WhyUsSection />

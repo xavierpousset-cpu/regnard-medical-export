@@ -14,6 +14,7 @@ import { Loader2, MessageSquare, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { getLoginUrl } from "@/const";
 
 export default function Forum() {
   const { user, isAuthenticated } = useAuth();
@@ -98,6 +99,30 @@ export default function Forum() {
       <Header />
       <main className="flex-1 pt-24">
         <div className="container py-12">
+          {!isAuthenticated && (
+            <Card className="mb-8 border-primary/30 bg-primary/5">
+              <CardContent className="pt-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-foreground font-semibold mb-1">
+                      Connectez-vous pour participer aux discussions
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Partagez vos expériences, posez vos questions et discutez de sujets techniques avec d'autres professionnels.
+                    </p>
+                  </div>
+                  <Button
+                    onClick={() => (window.location.href = getLoginUrl())}
+                    className="ml-4 flex-shrink-0"
+                    size="lg"
+                  >
+                    Se connecter
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
           <div className="mb-12">
             <h1 className="font-bold text-foreground mb-2">Forum Médical</h1>
             <p className="text-muted-foreground">
@@ -275,15 +300,7 @@ export default function Forum() {
             </div>
           </div>
 
-          {!isAuthenticated && (
-            <Card className="mt-8 bg-secondary/50">
-              <CardContent className="pt-6">
-                <p className="text-center text-muted-foreground mb-4">
-                  Connectez-vous pour participer aux discussions du forum
-                </p>
-              </CardContent>
-            </Card>
-          )}
+
         </div>
       </main>
       <Footer />
