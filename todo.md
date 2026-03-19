@@ -76,3 +76,9 @@
 - [x] Auditer et corriger le contraste du segment "Parlons de votre projet" (CTA section) sur la page À propos
 - [x] Vérifier tous les boutons d'action du site pour les problèmes de contraste
 - [x] Corriger les contrastes insuffisants identifiés
+
+## Optimisation SEO de la Page d'Accueil
+
+- [x] Réduire le titre de 74 à 30-60 caractères (nouveau titre : 47 caractères)
+- [x] Réduire la description meta de 179 à 50-160 caractères (nouvelle description : 128 caractères)
+- [x] Réduire les mots-clés de 9 à 3-8 ciblés (4 mots-clés ciblés)
