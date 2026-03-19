@@ -70,3 +70,9 @@
 ## Améliorations Visuelles (Session actuelle)
 
 - [x] Ajouter l'image du O-PREP DIVAN en fond du hero avec filtre noir
+
+## Audit et Correction des Contrastes
+
+- [x] Auditer et corriger le contraste du segment "Parlons de votre projet" (CTA section) sur la page À propos
+- [x] Vérifier tous les boutons d'action du site pour les problèmes de contraste
+- [x] Corriger les contrastes insuffisants identifiés

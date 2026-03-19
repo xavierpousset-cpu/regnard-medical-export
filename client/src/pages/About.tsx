@@ -232,19 +232,19 @@ export default function About() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-secondary">
+        <section className="py-20 bg-primary">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-white mb-6">
                 Parlons de votre projet
               </h2>
-              <p className="text-lg text-white/80 mb-8 leading-relaxed">
+              <p className="text-lg text-white/90 mb-8 leading-relaxed">
                 Vous avez une problématique en endoscopie, gérontologie ou préparation coloscopique ? Découvrez comment nos solutions peuvent améliorer votre pratique.
               </p>
               <Button
                 size="lg"
                 onClick={() => window.location.href = '/contact'}
-                className="bg-white text-secondary hover:bg-white/90 transition-colors duration-150 font-medium"
+                className="bg-white text-primary hover:bg-gray-100 transition-colors duration-150 font-semibold"
               >
                 Nous contacter
               </Button>
