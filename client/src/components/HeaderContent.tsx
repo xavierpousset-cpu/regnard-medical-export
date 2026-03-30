@@ -26,7 +26,7 @@ const navItems = [
 ];
 
 const produitsSubmenu = [
-  { label: "Le Divan O-SAN", href: "/o-san-divan" },
+  // { label: "Le Divan O-SAN", href: "/o-san-divan" }, // Masqué temporairement - en préparation
   { label: "Le Divan O-PREP", href: "/oprep-divan" },
   { label: "Le Trône O-PREP", href: "/oprep-altesse" },
 ];

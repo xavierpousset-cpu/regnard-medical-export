@@ -102,3 +102,7 @@
 
 ### Structure des Headings
 - [x] Vérifié : h1 unique par page sur toutes les pages principales
+
+## Modifications Récentes
+
+- [x] Masqué la page O-SAN du menu (en attente de préparation)
