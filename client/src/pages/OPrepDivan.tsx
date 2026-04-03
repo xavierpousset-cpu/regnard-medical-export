@@ -334,7 +334,7 @@ Il améliore significativement la qualité des soins et la sécurité des patien
       {/* Evidence-Based Reassurance Section */}
       <section className="py-24 bg-background">
         <div className="container">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Fondé sur la science</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4">Validation Scientifique</h2>
           <p className="text-lg text-muted-foreground mb-12 max-w-3xl">
             O-PREP®DIVAN s'appuie sur des études cliniques rigoureuses et des retours d'expérience de terrain en établissements de santé.
           </p>
