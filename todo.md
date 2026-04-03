@@ -124,3 +124,7 @@
 - [x] Créer le composant TrustSection avec design premium (3 établissements)
 - [x] Intégrer la section dans la homepage
 - [x] Tester et valider le rendu (tests passent, compilation sans erreurs)
+
+## Corrections Informations de Contact
+
+- [x] Corriger les informations de contact sur la page Contact

@@ -109,8 +109,8 @@ export default function ContactPage() {
                     <Mail className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-sm font-medium text-foreground">Email</p>
-                      <a href="mailto:contact@regnard-medical.fr" className="text-muted-foreground hover:text-primary transition-colors">
-                        contact@regnard-medical.fr
+                      <a href="mailto:contact@regnardmedical.com" className="text-muted-foreground hover:text-primary transition-colors">
+                        contact@regnardmedical.com
                       </a>
                     </div>
                   </div>
@@ -119,8 +119,8 @@ export default function ContactPage() {
                     <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-sm font-medium text-foreground">Téléphone</p>
-                      <a href="tel:+33123456789" className="text-muted-foreground hover:text-primary transition-colors">
-                        +33 (0)1 23 45 67 89
+                      <a href="tel:+33232247096" className="text-muted-foreground hover:text-primary transition-colors">
+                        +33 2 32 24 70 96
                       </a>
                     </div>
                   </div>
@@ -130,8 +130,9 @@ export default function ContactPage() {
                     <div>
                       <p className="text-sm font-medium text-foreground">Adresse</p>
                       <p className="text-muted-foreground">
-                        123 Rue de l'Innovation<br />
-                        75000 Paris, France
+                        Regnard Medical<br />
+                        9 Le Hanoy<br />
+                        27250 Rugles, France
                       </p>
                     </div>
                   </div>
