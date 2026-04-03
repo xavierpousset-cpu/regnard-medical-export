@@ -109,3 +109,12 @@
 
 - [x] Retiré la section "Le mot du gastroentérologue" de la page O-PREP DIVAN
 - [x] Changé la couleur du bouton questionnaire en blanc pour meilleure visibilité sur fond noir
+
+## Création de la Page Bibliographie
+
+- [x] Lire et résumer les 5 articles fournis
+- [x] Créer la page Bibliographie.tsx avec 5 articles
+- [x] Uploader les fichiers PDF et générer les liens
+- [x] Ajouter les segments d'articles avec résumés
+- [x] Intégrer la page dans la navigation
+- [x] Tester et valider (tests passent, compilation sans erreurs)

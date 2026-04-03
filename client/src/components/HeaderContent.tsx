@@ -22,6 +22,7 @@ const navItems = [
   },
   { label: "Forum", href: "/forum", isExternal: false },
   { label: "FAQ", href: "/faq", isExternal: false },
+  { label: "Bibliographie", href: "/bibliographie", isExternal: false },
   { label: "À propos", href: "/about", isExternal: false },
 ];
 
