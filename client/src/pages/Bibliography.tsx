@@ -160,7 +160,7 @@ export default function Bibliography() {
           <div className="container">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 pt-8">Bibliographie</h1>
             <p className="text-lg md:text-xl opacity-90 max-w-2xl">
-              Découvrez les études scientifiques et articles de recherche sur les méthodes de préparation colique et l'efficacité des solutions innovantes.
+              Découvrez les études scientifiques et articles de recherche sur les méthodes de préparation colique.
             </p>
           </div>
         </section>
