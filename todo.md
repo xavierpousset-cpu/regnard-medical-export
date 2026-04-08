@@ -149,3 +149,8 @@
 - [x] Modifier la page Services pour clarifier que Regnard Medical n'intervient pas sur place
 - [x] Modifier la page Réparations pour clarifier que Regnard Medical n'intervient pas sur place et travaille avec des partenaires
 - [x] Modifier la page Lits Médicalisés pour clarifier que Regnard Medical n'intervient pas sur place et travaille avec des partenaires
+
+## Suppression Images Fake
+
+- [x] Retirer les images fake de réparation de lits médicalisés de la page Services
+- [x] Retirer les images fake de réparation de lits médicalisés de la page Réparations
