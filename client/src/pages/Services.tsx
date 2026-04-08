@@ -64,18 +64,18 @@ export default function Services() {
     },
     {
       icon: Truck,
-      title: "Intervention sur site",
-      description: "Déploiement rapide et discret chez vos établissements",
+      title: "Réparation en atelier avec partenaires",
+      description: "Réparation de pièces en atelier spécialisé",
       details: [
-        "Déplacement rapide et réactif",
-        "Intervention en chambre ou atelier",
-        "Minimisation de l'impact sur l'organisation des soins",
-        "Respect des protocoles de sécurité",
+        "Diagnostic et évaluation des pièces",
+        "Réparation en atelier spécialisé",
+        "Travail en partenariat avec nos fournisseurs",
+        "Respect des normes de sécurité et de conformité",
       ],
       benefits: [
-        "Continuité des soins",
-        "Professionnalisme discret",
-        "Zéro interruption de service",
+        "Réparation qualifiée de pièces",
+        "Expertise spécialisée",
+        "Garantie de qualité",
       ],
     },
   ];

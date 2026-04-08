@@ -143,3 +143,9 @@
 
 - [x] Ajouter la précision que Regnard Medical est une division de Regnard Technologie dans les mentions légales
 - [x] Ajouter la précision que Regnard Medical est une division de Regnard Technologie dans la politique de confidentialité
+
+## Clarifications Politique de Réparation
+
+- [x] Modifier la page Services pour clarifier que Regnard Medical n'intervient pas sur place
+- [x] Modifier la page Réparations pour clarifier que Regnard Medical n'intervient pas sur place et travaille avec des partenaires
+- [x] Modifier la page Lits Médicalisés pour clarifier que Regnard Medical n'intervient pas sur place et travaille avec des partenaires

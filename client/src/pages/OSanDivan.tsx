@@ -257,6 +257,44 @@ Il améliore significativement la qualité des soins et la sécurité des patien
         </div>
       </section>
 
+      {/* Maintenance & Repair Service */}
+      <section className="py-24 bg-secondary">
+        <div className="container">
+          <div className="max-w-4xl">
+            <h2 className="font-bold text-foreground mb-8">Service de maintenance et réparation</h2>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                Regnard Medical propose un service de diagnostic et de réparation de pièces en partenariat avec nos fournisseurs spécialisés. Nous n'intervenons pas sur place, mais nous assurons la réparation qualifiée de vos équipements.
+              </p>
+              <div className="bg-background p-8 rounded-lg border border-border">
+                <h3 className="font-semibold text-foreground mb-6">Nos services incluent :</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <span>Diagnostic technique des équipements</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <span>Réparation en atelier avec partenaires spécialisés</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <span>Remplacement de pièces détachées d'origine</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <span>Garantie de qualité et conformité aux normes</span>
+                  </li>
+                </ul>
+              </div>
+              <p>
+                Pour toute demande de réparation ou de maintenance, veuillez nous contacter directement via le formulaire ci-dessous.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Quote Form */}
       <section id="devis-form" className="py-24 bg-background">
         <div className="container">

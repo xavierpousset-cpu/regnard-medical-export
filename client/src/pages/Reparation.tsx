@@ -73,7 +73,7 @@ export default function Reparation() {
               Maintenance et réparation de vos équipements médicaux
             </p>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Regnard Medical propose un service complet de maintenance préventive et de réparation pour assurer la continuité de vos soins et la longévité de vos équipements.
+              Regnard Medical propose un service de diagnostic et de réparation de pièces en partenariat avec nos fournisseurs spécialisés. Nous n'intervenons pas sur place, mais nous assurons la réparation qualifiée de vos équipements.
             </p>
             <Button
               onClick={scrollToForm}
@@ -92,18 +92,18 @@ export default function Reparation() {
             <h2 className="font-bold text-foreground mb-8">Expertise technique au service de votre structure</h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Notre équipe de techniciens qualifiés intervient rapidement pour diagnostiquer, réparer et maintenir vos équipements Regnard Medical. Nous garantissons une disponibilité maximale de vos installations.
+                Notre équipe de techniciens qualifiés assure le diagnostic et la réparation de vos équipements Regnard Medical. Nous travaillons avec des partenaires spécialisés pour la réparation en atelier, garantissant une qualité et une conformité optimales.
               </p>
               <div className="bg-secondary p-8 rounded-lg border border-border">
                 <h3 className="font-semibold text-foreground mb-6">Nos services incluent :</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                    <span>Maintenance préventive programmée</span>
+                    <span>Diagnostic technique des équipements</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                    <span>Intervention d'urgence en cas de panne</span>
+                    <span>Réparation en atelier avec partenaires spécialisés</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
@@ -111,7 +111,7 @@ export default function Reparation() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                    <span>Formation du personnel aux bonnes pratiques</span>
+                    <span>Garantie de qualité et conformité aux normes</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
@@ -120,7 +120,7 @@ export default function Reparation() {
                 </ul>
               </div>
               <p>
-                Nos contrats de maintenance sont adaptés à vos besoins spécifiques et à votre budget. Nous travaillons en étroite collaboration avec vos équipes pour minimiser les interruptions de service.
+                Nos services de réparation sont adaptés à vos besoins spécifiques. Nous travaillons en étroite collaboration avec nos partenaires pour assurer une réparation rapide et qualifiée de vos équipements.
               </p>
             </div>
           </div>
