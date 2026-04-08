@@ -138,3 +138,8 @@
 - [x] Supprimer la phrase "O'PREP fait l'objet d'évaluations cliniques en conditions réelles d'utilisation." de la TrustSection
 - [x] Ajouter "(en développement)" pour O-PREP ALTESSE sur la homepage
 - [x] Ajouter "(en développement)" pour O-PREP ALTESSE sur sa page produit
+
+## Modifications Pages Légales
+
+- [x] Ajouter la précision que Regnard Medical est une division de Regnard Technologie dans les mentions légales
+- [x] Ajouter la précision que Regnard Medical est une division de Regnard Technologie dans la politique de confidentialité

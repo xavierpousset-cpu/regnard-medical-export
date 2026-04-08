@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
               1. Introduction
             </h2>
             <p className="text-muted-foreground">
-              Regnard Medical (« nous », « notre » ou « la Société ») s'engage à
+              Regnard Medical (division de Regnard Technologie) (« nous », « notre » ou « la Société ») s'engage à
               respecter votre vie privée. Cette Politique de Confidentialité
               explique comment nous collectons, utilisons, divulguons et
               sauvegardons vos informations lorsque vous visitez notre site web

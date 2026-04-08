@@ -18,7 +18,7 @@ export default function LegalNotice() {
             Mentions Légales
           </h1>
           <p className="text-muted-foreground">
-            Informations légales concernant le site Regnard Medical
+            Informations légales concernant le site Regnard Medical, division de Regnard Technologie
           </p>
         </div>
 
@@ -38,7 +38,7 @@ export default function LegalNotice() {
             <div className="bg-secondary/50 p-6 rounded-lg space-y-3 text-sm">
               <p>
                 <strong>Propriétaire :</strong> Julie FLORIN REGNARD, Loic
-                REGNARD et Patrice REGNARD – REGNARD MEDICAL – SAS – 41216060800011
+                REGNARD et Patrice REGNARD – REGNARD MEDICAL (division de Regnard Technologie) – SAS – 41216060800011
                 – REGNARD MEDICAL, 9 LE HANOY 27250 RUGLES
               </p>
               <p>
@@ -70,12 +70,12 @@ export default function LegalNotice() {
             <p className="text-muted-foreground mb-4">
               Ce site est normalement accessible à tout moment aux utilisateurs.
               Une interruption pour raison de maintenance technique peut être
-              toutefois décidée par REGNARD MEDICAL, qui s'efforcera alors de
+              toutefois décidée par REGNARD MEDICAL (division de Regnard Technologie), qui s'efforcera alors de
               communiquer préalablement aux utilisateurs les dates et heures de
               l'intervention.
             </p>
             <p className="text-muted-foreground">
-              Le site est mis à jour régulièrement par REGNARD MEDICAL. De la
+              Le site est mis à jour régulièrement par REGNARD MEDICAL (division de Regnard Technologie). De la
               même façon, les mentions légales peuvent être modifiées à tout
               moment : elles s'imposent néanmoins à l'utilisateur qui est invité
               à s'y référer le plus souvent possible afin d'en prendre
@@ -93,7 +93,7 @@ export default function LegalNotice() {
               l'ensemble des activités de la société.
             </p>
             <p className="text-muted-foreground mb-4">
-              REGNARD MEDICAL s'efforce de fournir sur le site des informations
+              REGNARD MEDICAL (division de Regnard Technologie) s'efforce de fournir sur le site des informations
               aussi précises que possible. Toutefois, elle ne pourra être tenue
               responsable des omissions, des inexactitudes et des carences dans
               la mise à jour, qu'elles soient de son fait ou du fait des tiers
@@ -131,7 +131,7 @@ export default function LegalNotice() {
               5. Propriété intellectuelle et contrefaçons
             </h2>
             <p className="text-muted-foreground mb-4">
-              REGNARD MEDICAL est propriétaire des droits de propriété
+              REGNARD MEDICAL (division de Regnard Technologie) est propriétaire des droits de propriété
               intellectuelle ou détient les droits d'usage sur tous les éléments
               accessibles sur le site, notamment les textes, images, graphismes,
               logo, icônes, sons, logiciels.
@@ -140,7 +140,7 @@ export default function LegalNotice() {
               Toute reproduction, représentation, modification, publication,
               adaptation de tout ou partie des éléments du site, quel que soit
               le moyen ou le procédé utilisé, est interdite, sauf autorisation
-              écrite préalable de : REGNARD MEDICAL.
+              écrite préalable de : REGNARD MEDICAL (division de Regnard Technologie).
             </p>
             <p className="text-muted-foreground">
               Toute exploitation non autorisée du site ou de l'un quelconque des
@@ -156,25 +156,25 @@ export default function LegalNotice() {
               6. Limitations de responsabilité
             </h2>
             <p className="text-muted-foreground mb-4">
-              REGNARD MEDICAL ne pourra être tenue responsable des dommages
+              REGNARD MEDICAL (division de Regnard Technologie) ne pourra être tenue responsable des dommages
               directs et indirects causés au matériel de l'utilisateur, lors de
               l'accès au site, et résultant soit de l'utilisation d'un matériel
               ne répondant pas aux spécifications indiquées au point 4, soit de
               l'apparition d'un bug ou d'une incompatibilité.
             </p>
             <p className="text-muted-foreground mb-4">
-              REGNARD MEDICAL ne pourra également être tenue responsable des
+              REGNARD MEDICAL (division de Regnard Technologie) ne pourra également être tenue responsable des
               dommages indirects (tels par exemple qu'une perte de marché ou
               perte d'une chance) consécutifs à l'utilisation du site.
             </p>
             <p className="text-muted-foreground">
               Des espaces interactifs (possibilité de poser des questions dans
               l'espace contact) sont à la disposition des utilisateurs. REGNARD
-              MEDICAL se réserve le droit de supprimer, sans mise en demeure
+              MEDICAL (division de Regnard Technologie) se réserve le droit de supprimer, sans mise en demeure
               préalable, tout contenu déposé dans cet espace qui contreviendrait
               à la législation applicable en France, en particulier aux
               dispositions relatives à la protection des données. Le cas
-              échéant, REGNARD MEDICAL se réserve également la possibilité de
+              échéant, REGNARD MEDICAL (division de Regnard Technologie) se réserve également la possibilité de
               mettre en cause la responsabilité civile et/ou pénale de
               l'utilisateur, notamment en cas de message à caractère raciste,
               injurieux, diffamant, ou pornographique, quel que soit le support
@@ -200,7 +200,7 @@ export default function LegalNotice() {
               de protocole Internet (IP) de l'utilisateur.
             </p>
             <p className="text-muted-foreground mb-4">
-              En tout état de cause REGNARD MEDICAL ne collecte des informations
+              En tout état de cause REGNARD MEDICAL (division de Regnard Technologie) ne collecte des informations
               personnelles relatives à l'utilisateur que pour le besoin de
               certains services proposés par le site. L'utilisateur fournit ces
               informations en toute connaissance de cause, notamment lorsqu'il
@@ -222,7 +222,7 @@ export default function LegalNotice() {
               Aucune information personnelle de l'utilisateur du site n'est
               publiée à l'insu de l'utilisateur, échangée, transférée, cédée ou
               vendue sur un support quelconque à des tiers. Seule l'hypothèse du
-              rachat de REGNARD MEDICAL et de ses droits permettrait la
+              rachat de REGNARD MEDICAL (division de Regnard Technologie) et de ses droits permettrait la
               transmission des dites informations à l'éventuel acquéreur qui
               serait à son tour tenu de la même obligation de conservation et de
               modification des données vis à vis de l'utilisateur du site.
@@ -244,12 +244,11 @@ export default function LegalNotice() {
               8. Liens hypertextes et cookies
             </h2>
             <p className="text-muted-foreground mb-4">
-              Le site contient un certain nombre de liens hypertextes vers
+              Le site contient un certain nombre de liens hyptertextes vers
               d'autres sites, mis en place avec l'autorisation de REGNARD
-              MEDICAL. Cependant, REGNARD MEDICAL n'a pas la possibilité de
+              MEDICAL (division de Regnard Technologie). Cependant, REGNARD MEDICAL (division de Regnard Technologie) n'a pas la possibilité de
               vérifier le contenu des sites ainsi visités, et n'assumera en
-              conséquence aucune responsabilité de ce fait.
-            </p>
+              conséquence aucune responsabilité de ce fait.            </p>
             <p className="text-muted-foreground mb-4">
               La navigation sur le site est susceptible de provoquer
               l'installation de cookie(s) sur l'ordinateur de l'utilisateur. Un
