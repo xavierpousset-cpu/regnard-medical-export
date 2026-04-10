@@ -42,31 +42,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* L'Histoire Section */}
-        <section className="py-20 bg-background">
-          <div className="container">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="mb-12">
-                L'histoire
-              </h2>
-
-              <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Regnard Medical trouve son origine dans l'expertise industrielle développée par Patrice Regnard, fondateur de Regnard Technologie. Depuis plusieurs années, Regnard Technologie intervient dans des environnements techniques exigeants, avec une culture forte de la précision, de la fiabilité et de la résolution de problématiques complexes.
-                </p>
-
-                <p>
-                  C'est dans cette dynamique que Patrice Regnard rencontre le Dr Christian Lhirondel, gastroentérologue confronté aux réalités quotidiennes des pratiques d'endoscopie et des contraintes de préparation coloscopique. De cette rencontre naît une collaboration naturelle : une vision terrain médicale alliée à une capacité d'ingénierie et de conception industrielle.
-                </p>
-
-                <p className="font-semibold text-foreground">
-                  Objectif commun : améliorer les conditions de préparation et la prise en charge des patients.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* La Genèse d'O-PREP®DIVAN Section */}
         <section className="py-20 bg-secondary/5">
           <div className="container">

@@ -158,3 +158,7 @@
 ## Modifications Homepage Bibliographie
 
 - [x] Supprimer la phrase "Vous cherchez des preuves scientifiques..." de la section bibliographie en gardant le lien
+
+## Modifications Page À Propos
+
+- [x] Supprimer la section "La rencontre Regnard L'Hirondel" de la page À propos
