@@ -46,9 +46,9 @@ export default function EtudeMarche() {
       <Header />
       
       {/* Videodigest Banner - Compact */}
-      <div className="bg-gradient-to-r from-sky-600 to-sky-700 px-4 py-2 text-center">
-        <p className="text-sm text-white font-medium">
-          Videodigest 2026 • 18-20 novembre, Paris • Retrouvez-nous au stand Regnard Medical
+      <div className="bg-gradient-to-r from-sky-600 to-sky-700 px-6 py-4 text-center shadow-md">
+        <p className="text-base text-white font-semibold">
+          🎬 Videodigest 2026 • 18-20 novembre, Paris • Retrouvez-nous au stand Regnard Medical
         </p>
       </div>
       
