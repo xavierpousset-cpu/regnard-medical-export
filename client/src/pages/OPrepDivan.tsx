@@ -344,13 +344,13 @@ Il améliore significativement la qualité des soins et la sécurité des patien
         <div className="container">
           <h2 className="text-4xl font-bold text-foreground mb-4">Validation Scientifique</h2>
           <p className="text-lg text-muted-foreground mb-12 max-w-3xl">
-            O-PREP®DIVAN s'appuie sur des études cliniques rigoureuses et des retours d'expérience de terrain en établissements de santé.
+            O-PREP®DIVAN s'appuie sur des retours d'expérience de terrain en établissements de santé et sur des études cliniques rigoureuses portant sur le lavage hydro-colique.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="bg-secondary p-8 rounded-lg border border-border">
-              <h3 className="font-semibold text-foreground mb-4 text-lg">Efficacité clinique validée</h3>
+              <h3 className="font-semibold text-foreground mb-4 text-lg">Lavage hydro-colique : efficacité clinique</h3>
               <p className="text-muted-foreground mb-6">
-                Les études montrent que les systèmes d'irrigation colique haute performance offrent des taux de détection des polypes adénomateux et sessiles significativement supérieurs aux préparations orales traditionnelles.
+                Les études cliniques sur le lavage hydro-colique montrent que les systèmes d'irrigation colique haute performance offrent des taux de détection des polypes adénomateux et sessiles significativement supérieurs aux préparations orales traditionnelles.
               </p>
               <a href="/bibliographie#article-1" className="text-primary hover:text-primary/80 font-semibold flex items-center gap-2">
                 Consulter l'étude →

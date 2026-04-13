@@ -186,3 +186,10 @@
 - [x] Intégrer les inserts sur la homepage et pages produits
 - [x] Ajouter un CTA pour inviter à visiter le stand
 - [x] Tester l'affichage sur mobile et desktop
+
+## Correction Mentions Trompeuses - Études Cliniques
+
+- [x] Corriger OPrepDivan.tsx : préciser que les études portent sur le lavage hydro-colique, pas O-PREP
+- [x] Corriger OPrepAltesse.tsx : préciser que les études portent sur le lavage hydro-colique, pas O-PREP
+- [x] Vérifier et corriger Bibliographie.tsx si nécessaire
+- [x] Vérifier et corriger les autres pages produits
