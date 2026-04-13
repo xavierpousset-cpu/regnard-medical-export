@@ -20,6 +20,7 @@ import DemandeDevis from "./pages/DemandeDevis";
 import OSanDivan from "./pages/OSanDivan";
 import Reparation from "./pages/Reparation";
 import Bibliography from "./pages/Bibliography";
+import EtudeMarche from "./pages/EtudeMarche";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -42,6 +43,7 @@ function Router() {
       <Route path={"/mentions-legales"} component={LegalNotice} />
       <Route path={"/politique-confidentialite"} component={PrivacyPolicy} />
       <Route path={"/bibliographie"} component={Bibliography} />
+      <Route path={"/etude-marche"} component={EtudeMarche} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

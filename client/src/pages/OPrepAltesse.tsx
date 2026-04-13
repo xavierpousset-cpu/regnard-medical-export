@@ -60,7 +60,7 @@ export default function OPrepAltesse() {
   };
 
   const scrollToSurvey = () => {
-    window.location.href = "/questionnaire-ehpad";
+    window.location.href = "/etude-marche";
   };
 
   return (

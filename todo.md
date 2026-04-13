@@ -166,3 +166,9 @@
 ## Remplacement Formulaire Tally
 
 - [x] Remplacer le formulaire Tally actuel par le nouveau formulaire (xXZ8yo)
+
+## Création Page Étude de Marché
+
+- [x] Créer une nouvelle page dédiée à l'étude de marché pour les professionnels de santé
+- [x] Ajouter la route /etude-marche dans App.tsx
+- [x] Mettre à jour tous les liens du site pointant vers l'étude de marché
