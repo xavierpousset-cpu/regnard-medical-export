@@ -116,7 +116,7 @@ export default function VideodigestBanner({
           {/* Description */}
           <div className="mb-8 max-w-2xl">
             <h3 className="text-xl font-bold mb-3">
-              Découvrez nos innovations en endoscopie digestive
+              Découvrez nos innovations en préparation colique
             </h3>
             <p className="text-sky-100 mb-4">
               Regnard Medical sera présent avec un stand dédié et une
