@@ -378,8 +378,8 @@ Il améliore significativement la qualité des soins et la sécurité des patien
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
             O-PREP®DIVAN est utilisé dans plusieurs établissements hospitaliers et cliniques en Europe, reconnus pour leur excellence médicale.
           </p>
-          <a href="/#trust-section" className="text-primary hover:text-primary/80 font-semibold flex items-center gap-2 w-fit mb-8">
-            Découvrir nos partenaires établissements →
+          <a href="/#etablissements" className="text-primary hover:text-primary/80 font-semibold flex items-center gap-2 w-fit mb-8">
+            Découvrir les établissements
           </a>
         </div>
       </section>

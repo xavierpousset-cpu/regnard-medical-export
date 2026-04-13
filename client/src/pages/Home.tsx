@@ -28,7 +28,9 @@ export default function Home() {
         <ProductsSection />
         <EhpadStudySection />
         <ValuesSection />
-        <TrustSection />
+        <div id="etablissements">
+          <TrustSection />
+        </div>
         <VideodigestBanner />
         <WhyUsSection />
         <ContactSection />
