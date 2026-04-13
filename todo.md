@@ -172,3 +172,9 @@
 - [x] Créer une nouvelle page dédiée à l'étude de marché pour les professionnels de santé
 - [x] Ajouter la route /etude-marche dans App.tsx
 - [x] Mettre à jour tous les liens du site pointant vers l'étude de marché
+
+## Amélioration Page Étude de Marché
+
+- [x] Restructurer la page pour améliorer l'intégration du formulaire Tally
+- [x] Retirer la scrollbar de la page
+- [x] Cacher le footer jusqu'au scroll complet
