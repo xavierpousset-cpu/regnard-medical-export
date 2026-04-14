@@ -15,7 +15,7 @@ export const pageMetaTags: Record<string, MetaTagsConfig> = {
   '/oprep-divan': {
     title: 'O-PREP® DIVAN - Hydrolavage colique | Videodigest 2026',
     description: 'Venez découvrir O-PREP DIVAN, notre solution d\'hydrolavage colique lors de Videodigest 2026. 18-20 novembre à Paris.',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663365995358/emZFRNSoPdeUeWX5JnxLkg/og-image-oprep-divan-videodigest_11ec212e.webp',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663365995358/emZFRNSoPdeUeWX5JnxLkg/ImageOpenGraph_df52b19a.png',
     imageWidth: 1200,
     imageHeight: 630,
   },
