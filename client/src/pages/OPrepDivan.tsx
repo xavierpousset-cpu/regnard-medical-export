@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2, Shield, Heart, Users, Droplet, Award } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TechnicalSpecsSection from "@/components/TechnicalSpecsSection";
@@ -68,6 +69,19 @@ export default function OPrepDivan() {
   };
 
   return (
+    <>
+      <Helmet>
+        <title>O-PREP® DIVAN - Solution d'hydrolavage colique | Regnard Medical</title>
+        <meta name="description" content="Découvrez O-PREP® DIVAN, notre solution d'hydrolavage colique haute performance. Rencontrez-nous à Videodigest 2026 (18-20 novembre, Paris)." />
+        <meta property="og:title" content="O-PREP® DIVAN - Hydrolavage colique | Videodigest 2026" />
+        <meta property="og:description" content="Venez découvrir O-PREP DIVAN, notre solution d'hydrolavage colique lors de Videodigest 2026. 18-20 novembre à Paris." />
+        <meta property="og:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310519663365995358/emZFRNSoPdeUeWX5JnxLkg/og-image-oprep-divan-videodigest_11ec212e.webp" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="O-PREP® DIVAN - Hydrolavage colique | Videodigest 2026" />
+        <meta name="twitter:description" content="Venez découvrir O-PREP DIVAN lors de Videodigest 2026. 18-20 novembre à Paris." />
+        <meta name="twitter:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310519663365995358/emZFRNSoPdeUeWX5JnxLkg/og-image-oprep-divan-videodigest_11ec212e.webp" />
+      </Helmet>
     <div className="min-h-screen flex flex-col">
       <Header />
       {/* Hero Section */}
@@ -532,5 +546,6 @@ Il améliore significativement la qualité des soins et la sécurité des patien
 
       <Footer />
     </div>
+    </>
   );
 }
