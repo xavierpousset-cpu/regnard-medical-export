@@ -12,6 +12,8 @@ import { toast } from "sonner";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
+import ProductSchema from "@/components/ProductSchema";
 import TechnicalSpecsSection from "@/components/TechnicalSpecsSection";
 // import ExpertVideoSection from "@/components/ExpertVideoSection"; // Retiré temporairement
 import ComparisonSection from "@/components/ComparisonSection";
@@ -71,10 +73,12 @@ export default function OPrepDivan() {
   return (
     <>
       <Helmet>
-        <title>O-PREP® DIVAN - Solution d'hydrolavage colique | Regnard Medical</title>
-        <meta name="description" content="Découvrez O-PREP® DIVAN, notre solution d'hydrolavage colique haute performance. Rencontrez-nous à Videodigest 2026 (18-20 novembre, Paris)." />
+        <title>O-PREP® DIVAN - Solution d'hydrolavage colique pour EHPAD | Regnard Medical</title>
+        <meta name="description" content="O-PREP® DIVAN : solution d'hydrolavage colique (ITA) pour EHPAD et milieu hospitalier. Système ergonomique, sécurisé, haute performance. Videodigest 2026. Demandez un devis." />
+        <meta name="keywords" content="O-PREP, O PREP, O'PREP, hydrolavage colique, ITA, irrigation transanale, EHPAD, gériatrie, dispositif médical, préparation coloscopique" />
         <meta property="og:title" content="O-PREP® DIVAN - Hydrolavage colique | Videodigest 2026" />
         <meta property="og:description" content="Venez découvrir O-PREP DIVAN, notre solution d'hydrolavage colique lors de Videodigest 2026. 18-20 novembre à Paris." />
+        <link rel="canonical" href="https://www.regnardmedical.com/oprep-divan" />
         <meta property="og:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310519663365995358/emZFRNSoPdeUeWX5JnxLkg/ImageOpenGraph_df52b19a.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -82,8 +86,20 @@ export default function OPrepDivan() {
         <meta name="twitter:description" content="Venez découvrir O-PREP DIVAN lors de Videodigest 2026. 18-20 novembre à Paris." />
         <meta name="twitter:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310519663365995358/emZFRNSoPdeUeWX5JnxLkg/ImageOpenGraph_df52b19a.png" />
       </Helmet>
+      <ProductSchema
+        name="O-PREP® DIVAN"
+        description="Solution d'hydrolavage colique (ITA) pour EHPAD et milieu hospitalier. Système ergonomique, sécurisé, haute performance avec réservoir de 30,5 litres."
+        image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/PkszOBngDOpNWnXd.png"
+        url="https://www.regnardmedical.com/oprep-divan"
+        category="Dispositif Médical - Irrigation Transanale"
+      />
     <div className="min-h-screen flex flex-col">
       <Header />
+      <Breadcrumb items={[
+        { label: "Accueil", href: "/" },
+        { label: "Produits", href: "/" },
+        { label: "O-PREP® DIVAN" },
+      ]} />
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 mt-20 overflow-hidden" style={{
         backgroundImage: 'url(/oprep-divan-hero.jpg)',

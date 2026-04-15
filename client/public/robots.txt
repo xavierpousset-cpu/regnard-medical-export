@@ -7,6 +7,8 @@ Disallow: /__manus__/
 
 # Sitemaps
 Sitemap: https://www.regnardmedical.com/sitemap.xml
+Sitemap: https://regnardmedical.manus.space/sitemap.xml
+Sitemap: https://regnardmed-emzfrnso.manus.space/sitemap.xml
 
 # Crawl delay (in seconds)
 Crawl-delay: 1
