@@ -1,6 +1,7 @@
 import { db } from "./db";
 import { contactMessages } from "../drizzle/schema";
 import { eq } from "drizzle-orm";
+import { sendContactNotificationEmail } from "./email";
 
 export type ContactMessageInput = {
   nom: string;
@@ -26,6 +27,20 @@ export async function createContactMessage(input: ContactMessageInput) {
     message: input.message,
     status: "new",
   });
+
+  // Envoyer un email de notification à l'admin
+  const adminEmail = process.env.ADMIN_EMAIL || "admin@regnardmedical.com";
+  if (adminEmail && process.env.RESEND_API_KEY) {
+    await sendContactNotificationEmail({
+      adminEmail,
+      senderName: input.nom,
+      senderEmail: input.email,
+      senderFunction: input.fonction,
+      senderEstablishment: input.etablissement,
+      senderPhone: input.telephone,
+      message: input.message,
+    }).catch(err => console.error("[Email Send Error]", err));
+  }
 
   return result;
 }
