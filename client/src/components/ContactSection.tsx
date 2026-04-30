@@ -12,6 +12,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Clock } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { trpc } from "@/lib/trpc";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -23,6 +24,24 @@ export default function ContactSection() {
     message: "",
   });
 
+  const submitContactMutation = trpc.contact.submit.useMutation({
+    onSuccess: () => {
+      toast.success("Votre message a été envoyé avec succès. Nous vous répondrons sous 48h.");
+      // Reset form
+      setFormData({
+        nom: "",
+        fonction: "",
+        etablissement: "",
+        email: "",
+        telephone: "",
+        message: "",
+      });
+    },
+    onError: (error) => {
+      toast.error(error.message || "Une erreur est survenue lors de l'envoi du message");
+    },
+  });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -32,17 +51,14 @@ export default function ContactSection() {
       return;
     }
 
-    // Simulation d'envoi
-    toast.success("Votre message a été envoyé avec succès. Nous vous répondrons sous 48h.");
-    
-    // Reset form
-    setFormData({
-      nom: "",
-      fonction: "",
-      etablissement: "",
-      email: "",
-      telephone: "",
-      message: "",
+    // Soumettre via tRPC
+    submitContactMutation.mutate({
+      nom: formData.nom,
+      fonction: formData.fonction || undefined,
+      etablissement: formData.etablissement || undefined,
+      email: formData.email,
+      telephone: formData.telephone || undefined,
+      message: formData.message,
     });
   };
 
@@ -87,99 +103,111 @@ export default function ContactSection() {
           {/* Right column - Form */}
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Nom */}
               <div>
-                <Label htmlFor="nom" className="text-foreground font-medium">
-                  Nom *
+                <Label htmlFor="nom" className="text-foreground">
+                  Nom <span className="text-primary">*</span>
                 </Label>
                 <Input
                   id="nom"
                   name="nom"
                   type="text"
-                  required
+                  placeholder="Votre nom"
                   value={formData.nom}
                   onChange={handleChange}
-                  className="mt-2 bg-background border-border focus:border-primary transition-colors duration-150"
+                  required
+                  className="mt-2"
                 />
               </div>
 
+              {/* Fonction */}
               <div>
-                <Label htmlFor="fonction" className="text-foreground font-medium">
+                <Label htmlFor="fonction" className="text-foreground">
                   Fonction
                 </Label>
                 <Input
                   id="fonction"
                   name="fonction"
                   type="text"
+                  placeholder="Votre fonction"
                   value={formData.fonction}
                   onChange={handleChange}
-                  className="mt-2 bg-background border-border focus:border-primary transition-colors duration-150"
+                  className="mt-2"
                 />
               </div>
 
+              {/* Établissement */}
               <div>
-                <Label htmlFor="etablissement" className="text-foreground font-medium">
+                <Label htmlFor="etablissement" className="text-foreground">
                   Établissement
                 </Label>
                 <Input
                   id="etablissement"
                   name="etablissement"
                   type="text"
+                  placeholder="Votre établissement"
                   value={formData.etablissement}
                   onChange={handleChange}
-                  className="mt-2 bg-background border-border focus:border-primary transition-colors duration-150"
+                  className="mt-2"
                 />
               </div>
 
+              {/* Email */}
               <div>
-                <Label htmlFor="email" className="text-foreground font-medium">
-                  Email *
+                <Label htmlFor="email" className="text-foreground">
+                  Email <span className="text-primary">*</span>
                 </Label>
                 <Input
                   id="email"
                   name="email"
                   type="email"
-                  required
+                  placeholder="votre@email.com"
                   value={formData.email}
                   onChange={handleChange}
-                  className="mt-2 bg-background border-border focus:border-primary transition-colors duration-150"
+                  required
+                  className="mt-2"
                 />
               </div>
 
+              {/* Téléphone */}
               <div>
-                <Label htmlFor="telephone" className="text-foreground font-medium">
+                <Label htmlFor="telephone" className="text-foreground">
                   Téléphone
                 </Label>
                 <Input
                   id="telephone"
                   name="telephone"
                   type="tel"
+                  placeholder="Votre numéro de téléphone"
                   value={formData.telephone}
                   onChange={handleChange}
-                  className="mt-2 bg-background border-border focus:border-primary transition-colors duration-150"
+                  className="mt-2"
                 />
               </div>
 
+              {/* Message */}
               <div>
-                <Label htmlFor="message" className="text-foreground font-medium">
-                  Message *
+                <Label htmlFor="message" className="text-foreground">
+                  Message <span className="text-primary">*</span>
                 </Label>
                 <Textarea
                   id="message"
                   name="message"
-                  required
-                  rows={6}
+                  placeholder="Votre message..."
                   value={formData.message}
                   onChange={handleChange}
-                  className="mt-2 bg-background border-border focus:border-primary transition-colors duration-150 resize-none"
+                  required
+                  className="mt-2 min-h-32"
                 />
               </div>
 
+              {/* Submit Button */}
               <Button
                 type="submit"
-                size="lg"
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-150 font-medium"
+                disabled={submitContactMutation.isPending}
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-150"
               >
-                Envoyer le message
+                {submitContactMutation.isPending ? "Envoi en cours..." : "Envoyer le message"}
               </Button>
             </form>
           </div>

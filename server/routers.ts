@@ -4,6 +4,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router, protectedProcedure } from "./_core/trpc";
 import { z } from "zod";
 import { createQuoteRequest, getQuoteRequests, getAllUsers, updateUserRole, deleteUser, createForumTopic, getForumTopics, getForumTopicById, createForumPost, getForumPostsByTopic, deleteForumPost, deleteForumTopic } from "./db";
+import { createContactMessage, getAllContactMessages, markContactMessageAsRead, markContactMessageAsReplied, archiveContactMessage, deleteContactMessage } from "./contact";
 import { notifyOwner } from "./_core/notification";
 import { TRPCError } from "@trpc/server";
 
@@ -152,6 +153,73 @@ export const appRouter = router({
           throw new TRPCError({ code: 'FORBIDDEN', message: 'Admin access required' });
         }
         await deleteForumTopic(input.topicId);
+        return { success: true };
+      }),
+  }),
+
+  contact: router({
+    submit: publicProcedure
+      .input(
+        z.object({
+          nom: z.string().min(1, "Le nom est requis"),
+          fonction: z.string().optional(),
+          etablissement: z.string().optional(),
+          email: z.string().email("Email invalide"),
+          telephone: z.string().optional(),
+          message: z.string().min(1, "Le message est requis"),
+        })
+      )
+      .mutation(async ({ input }) => {
+        const result = await createContactMessage(input);
+        
+        // Notifier le proprietaire
+        await notifyOwner({
+          title: "Nouveau message de contact",
+          content: `De: ${input.nom} (${input.email})\n\nFonction: ${input.fonction || 'Non spécifiée'}\nÉtablissement: ${input.etablissement || 'Non spécifié'}\nTéléphone: ${input.telephone || 'Non spécifié'}\n\nMessage:\n${input.message}`,
+        });
+        
+        return { success: true, id: (result as any).insertId || 0 };
+      }),
+    list: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== 'admin' && ctx.user.role !== 'superadmin') {
+        throw new TRPCError({ code: 'FORBIDDEN', message: 'Admin access required' });
+      }
+      return await getAllContactMessages();
+    }),
+    markAsRead: protectedProcedure
+      .input(z.object({ messageId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== 'admin' && ctx.user.role !== 'superadmin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Admin access required' });
+        }
+        await markContactMessageAsRead(input.messageId);
+        return { success: true };
+      }),
+    markAsReplied: protectedProcedure
+      .input(z.object({ messageId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== 'admin' && ctx.user.role !== 'superadmin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Admin access required' });
+        }
+        await markContactMessageAsReplied(input.messageId);
+        return { success: true };
+      }),
+    archive: protectedProcedure
+      .input(z.object({ messageId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== 'admin' && ctx.user.role !== 'superadmin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Admin access required' });
+        }
+        await archiveContactMessage(input.messageId);
+        return { success: true };
+      }),
+    delete: protectedProcedure
+      .input(z.object({ messageId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== 'admin' && ctx.user.role !== 'superadmin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Admin access required' });
+        }
+        await deleteContactMessage(input.messageId);
         return { success: true };
       }),
   }),

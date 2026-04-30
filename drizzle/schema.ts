@@ -67,3 +67,20 @@ export const forumPosts = mysqlTable("forumPosts", {
 
 export type ForumPost = typeof forumPosts.$inferSelect;
 export type InsertForumPost = typeof forumPosts.$inferInsert;
+
+// Table pour les messages de contact
+export const contactMessages = mysqlTable("contactMessages", {
+  id: int("id").autoincrement().primaryKey(),
+  nom: varchar("nom", { length: 255 }).notNull(),
+  fonction: varchar("fonction", { length: 255 }),
+  etablissement: varchar("etablissement", { length: 255 }),
+  email: varchar("email", { length: 320 }).notNull(),
+  telephone: varchar("telephone", { length: 20 }),
+  message: text("message").notNull(),
+  status: mysqlEnum("status", ["new", "read", "replied", "archived"]).default("new").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type ContactMessage = typeof contactMessages.$inferSelect;
+export type InsertContactMessage = typeof contactMessages.$inferInsert;
