@@ -1,6 +1,22 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let resend: InstanceType<typeof Resend> | null = null;
+
+/**
+ * Obtenir l'instance Resend (lazy initialization)
+ */
+function getResend() {
+  if (!process.env.RESEND_API_KEY) {
+    console.warn("[Email] RESEND_API_KEY not configured, email notifications disabled");
+    return null;
+  }
+
+  if (!resend) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+
+  return resend;
+}
 
 export type EmailParams = {
   to: string;
@@ -13,8 +29,15 @@ export type EmailParams = {
  * Envoyer un email via Resend
  */
 export async function sendEmail(params: EmailParams) {
+  const client = getResend();
+  
+  if (!client) {
+    console.warn("[Email] Resend not configured, skipping email send");
+    return { success: false, error: "Resend not configured" };
+  }
+
   try {
-    const result = await resend.emails.send({
+    const result = await client.emails.send({
       from: params.from || "noreply@regnardmedical.com",
       to: params.to,
       subject: params.subject,
