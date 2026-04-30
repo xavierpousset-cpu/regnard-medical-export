@@ -1,4 +1,4 @@
-import { db } from "./db";
+import { getDb } from "./db";
 import { contactMessages } from "../drizzle/schema";
 import { eq } from "drizzle-orm";
 import { sendContactNotificationEmail } from "./email";
@@ -16,7 +16,7 @@ export type ContactMessageInput = {
  * Créer un nouveau message de contact
  */
 export async function createContactMessage(input: ContactMessageInput) {
-  const database = await db();
+  const database = await getDb();
   
   const result = await database.insert(contactMessages).values({
     nom: input.nom,
@@ -49,7 +49,7 @@ export async function createContactMessage(input: ContactMessageInput) {
  * Récupérer tous les messages de contact (admin only)
  */
 export async function getAllContactMessages() {
-  const database = await db();
+  const database = await getDb();
   
   const messages = await database
     .select()
@@ -63,7 +63,7 @@ export async function getAllContactMessages() {
  * Récupérer les messages non lus
  */
 export async function getUnreadContactMessages() {
-  const database = await db();
+  const database = await getDb();
   
   const messages = await database
     .select()
@@ -78,7 +78,7 @@ export async function getUnreadContactMessages() {
  * Marquer un message comme lu
  */
 export async function markContactMessageAsRead(messageId: number) {
-  const database = await db();
+  const database = await getDb();
   
   const result = await database
     .update(contactMessages)
@@ -92,7 +92,7 @@ export async function markContactMessageAsRead(messageId: number) {
  * Marquer un message comme répondu
  */
 export async function markContactMessageAsReplied(messageId: number) {
-  const database = await db();
+  const database = await getDb();
   
   const result = await database
     .update(contactMessages)
@@ -106,7 +106,7 @@ export async function markContactMessageAsReplied(messageId: number) {
  * Archiver un message
  */
 export async function archiveContactMessage(messageId: number) {
-  const database = await db();
+  const database = await getDb();
   
   const result = await database
     .update(contactMessages)
@@ -120,7 +120,7 @@ export async function archiveContactMessage(messageId: number) {
  * Supprimer un message
  */
 export async function deleteContactMessage(messageId: number) {
-  const database = await db();
+  const database = await getDb();
   
   const result = await database
     .delete(contactMessages)
