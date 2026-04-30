@@ -37,8 +37,9 @@ export async function sendEmail(params: EmailParams) {
   }
 
   try {
+    const fromEmail = params.from || process.env.RESEND_FROM_EMAIL || "noreply@regnardmedical.com";
     const result = await client.emails.send({
-      from: params.from || "noreply@regnardmedical.com",
+      from: fromEmail,
       to: params.to,
       subject: params.subject,
       html: params.html,
