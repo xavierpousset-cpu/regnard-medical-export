@@ -16,6 +16,7 @@ import Services from "./pages/Services";
 import FAQ from "./pages/FAQ";
 import ContactPage from "./pages/ContactPage";
 import About from "./pages/About";
+import AdminMessages from "./pages/AdminMessages";
 import DemandeDevis from "./pages/DemandeDevis";
 import OSanDivan from "./pages/OSanDivan";
 import Reparation from "./pages/Reparation";
@@ -36,6 +37,7 @@ function Router() {
       <Route path={"/relax-divan"} component={OSanDivan} />
       <Route path={"/reparation"} component={Reparation} />
       <Route path={"/admin"} component={AdminDashboard} />
+      <Route path={"/admin/messages"} component={AdminMessages} />
       <Route path={"/forum"} component={Forum} />
       <Route path={"/services"} component={Services} />
       <Route path={"/faq"} component={FAQ} />
