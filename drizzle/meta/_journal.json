@@ -29,6 +29,13 @@
       "when": 1771511448627,
       "tag": "0003_shocking_doctor_faustus",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1777540340831,
+      "tag": "0004_curly_ezekiel_stane",
+      "breakpoints": true
     }
   ]
 }
