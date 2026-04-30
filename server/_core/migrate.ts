@@ -1,6 +1,4 @@
 import { execSync } from "child_process";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
 
 /**
  * Exécuter les migrations Drizzle au démarrage du serveur
@@ -15,16 +13,14 @@ export async function runMigrations() {
   try {
     console.log("[Migration] Running database migrations...");
     
-    // Créer __dirname en ES modules
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = dirname(__filename);
-    
-    // Remonter de server/_core/ vers la racine du projet
-    const projectRoot = dirname(dirname(__dirname));
-    const migrateCommand = `cd ${projectRoot} && npx drizzle-kit migrate`;
+    // En production, le code est compilé dans /app/dist/
+    // On exécute la migration depuis /app (la racine du projet)
+    const projectRoot = process.cwd();
+    const migrateCommand = `npx drizzle-kit migrate --config drizzle.config.ts`;
     
     execSync(migrateCommand, {
       stdio: "inherit",
+      cwd: projectRoot,
       env: { ...process.env },
     });
 
