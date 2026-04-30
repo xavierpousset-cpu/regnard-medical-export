@@ -41,7 +41,7 @@ export class HeaderErrorBoundary extends Component<Props, State> {
                   className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-150"
                 >
                   <img
-                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663365995358/BeDJyMcSBxFSTGCS.png"
+                    src="/logo-regnard.png"
                     alt="Regnard Medical Logo"
                     className="h-10 w-10"
                   />
@@ -51,19 +51,30 @@ export class HeaderErrorBoundary extends Component<Props, State> {
                 </a>
               </div>
 
-              {/* Desktop Navigation - Minimal */}
+              {/* Desktop Navigation - Complete */}
               <nav className="hidden md:flex items-center space-x-6">
-                <a href="/services" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150">
-                  Nos services
-                </a>
+                <div className="relative group">
+                  <button className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150">
+                    Nos solutions
+                  </button>
+                </div>
                 <a href="/forum" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150">
                   Forum
                 </a>
                 <a href="/faq" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150">
                   FAQ
                 </a>
-                <a href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150">
+                <a href="/bibliographie" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150">
+                  Bibliographie
+                </a>
+                <a href="/about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150">
+                  À propos
+                </a>
+                <a href="/#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150">
                   Contact
+                </a>
+                <a href="/login" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150">
+                  Connexion
                 </a>
               </nav>
 
